@@ -1,0 +1,92 @@
+@function imgUrl($file, $path: "background") {
+    @return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+.hero_nav {
+    .slide-nav {
+        position: fixed;
+        background: $primary;
+        height: 100%;
+        z-index: 100000000;
+        width: 100%;
+        padding: 50px;
+        color: $white;
+        // font-family: $font-roboto;
+        font-weight: 500;
+        font-size: 1.25rem;
+        transform: translateX(100%);
+        transition: 0.2s all ease-in-out;
+    
+        &.nav-open {
+            transform: translateX(0);
+        }
+    }
+    
+    .navigation {
+        box-shadow: 0 -8px 28px rgb(0 0 0 / 85%);
+        padding: 17px 0;
+        // position: fixed;
+        // width: 100%;
+        // z-index: 10000000;
+
+        #triggerSlideNav {
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-brand {
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-btns {
+            gap: 15px;
+
+            .btn {
+                height: 61px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 196px;
+            }
+        }
+    
+        .primary_menu ul {    
+            li {
+                a {
+                    color: #1F2527;
+                    font-size: 1.25rem;
+                }
+    
+                &.current-menu-item a {
+                    font-weight: 700;
+                }
+            }
+        }
+    
+        @include media-breakpoint-down(sm) {
+            nav.navbar {
+                flex-wrap: nowrap;
+            }
+        }
+    
+        @include media-breakpoint-up(xl) {
+            .dropdown:hover>.dropdown-menu {
+                display: block;
+            }
+        }
+    
+        .dropdown-menu {
+            min-width: 14rem;
+            background-color: $primary;
+    
+            a.nav-link {
+                padding: 0.5rem !important;
+                font-weight: 500 !important;
+                font-size: 0.875rem !important;
+            }
+        }
+    }
+}
