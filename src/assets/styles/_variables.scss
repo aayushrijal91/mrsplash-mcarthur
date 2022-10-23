@@ -1,4 +1,5 @@
 $primary: #0383BF;
+$primary-light: #3EB8DE;
 $secondary: #CF4275;
 $tertiary: #3729C2;
 $dark: #393A41;
@@ -11,6 +12,7 @@ $theme-colors: (
     ) !default;
 $theme-colors: map-merge((
     "primary": $primary,
+    "primary-light": $primary-light,
     "secondary": $secondary,
     "tertiary": $tertiary,
     "off-grey": $off-grey,
@@ -69,8 +71,9 @@ $spacers: map-merge((1: $spacer * 0.25,
 );
 
 $font-sizes: (
-    32: 2rem,
-    18: 1.125rem,
+    48: 48px,
+    32: 32px,
+    18: 18px,
 );
 
 $border-radius: .25rem !default;

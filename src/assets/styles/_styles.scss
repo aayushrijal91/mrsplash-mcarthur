@@ -1,5 +1,5 @@
-@function imgUrl($file, $path: "background") {
-    @return url("../images/" + $path + "/" + $file) no-repeat;
+@function imgUrl($file, $path: "background"){
+@return url("../images/" + $path + "/" + $file) no-repeat;
 }
 
 .hero_nav {
@@ -16,12 +16,12 @@
         font-size: 1.25rem;
         transform: translateX(100%);
         transition: 0.2s all ease-in-out;
-    
+
         &.nav-open {
             transform: translateX(0);
         }
     }
-    
+
     .navigation {
         box-shadow: 0 -8px 28px rgb(0 0 0 / 85%);
         padding: 17px 0;
@@ -52,41 +52,53 @@
                 min-width: 196px;
             }
         }
-    
-        .primary_menu ul {    
+
+        .primary_menu ul {
             li {
                 a {
                     color: #1F2527;
                     font-size: 1.25rem;
                 }
-    
+
                 &.current-menu-item a {
                     font-weight: 700;
                 }
             }
         }
-    
+
         @include media-breakpoint-down(sm) {
             nav.navbar {
                 flex-wrap: nowrap;
             }
         }
-    
+
         @include media-breakpoint-up(xl) {
             .dropdown:hover>.dropdown-menu {
                 display: block;
             }
         }
-    
+
         .dropdown-menu {
             min-width: 14rem;
             background-color: $primary;
-    
+
             a.nav-link {
                 padding: 0.5rem !important;
                 font-weight: 500 !important;
                 font-size: 0.875rem !important;
             }
         }
+    }
+}
+
+footer {
+    padding: 80px 0;
+    background: radial-gradient(73.65% 190.43% at 85.49% 50%, #2F3436 0%, #0A161F 100%);
+
+    .quick_contact {
+        padding: 50px 60px;
+        color: $white;
+        border-radius: 20px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     }
 }
