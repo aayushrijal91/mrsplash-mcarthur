@@ -11,7 +11,6 @@
         width: 100%;
         padding: 50px;
         color: $white;
-        // font-family: $font-roboto;
         font-weight: 500;
         font-size: 1.25rem;
         transform: translateX(100%);
@@ -25,9 +24,10 @@
     .navigation {
         box-shadow: 0 -8px 28px rgb(0 0 0 / 85%);
         padding: 17px 0;
-        // position: fixed;
-        // width: 100%;
-        // z-index: 10000000;
+        position: fixed;
+        width: 100%;
+        z-index: 10000000;
+        background: $white;
 
         #triggerSlideNav {
             &:focus {
@@ -91,8 +91,37 @@
     }
 }
 
+// Start of Header
+header {
+    margin-top: 123px;
+
+    &.homepage_header {
+        background: imgUrl('homepage-banner.png') right center, radial-gradient(73.65% 190.43% at 85.49% 50%, #19252D 0%, #09141C 100%);
+        background-size: contain;
+        padding: 150px 0;
+        color: $white;
+
+        .hero_heading span {
+            color: $secondary;
+        }
+
+        .sub_heading {
+            padding: 30px 0;
+            
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &.subpage_header {}
+}
+
+// End of Header
+
+// Start of Footer
 footer {
-    padding: 80px 0;
+    padding: 80px 0 70px;
     background: radial-gradient(73.65% 190.43% at 85.49% 50%, #2F3436 0%, #0A161F 100%);
 
     .quick_contact {
@@ -101,4 +130,36 @@ footer {
         border-radius: 20px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     }
+
+    hr {
+        color: $light-grey;
+        border-top: 1px solid;
+        margin: 30px 0 40px;
+        opacity: 1;
+    }
+
+    .navigation_wrapper {
+        .footer_menu ul {
+            padding-inline-start: 0;
+
+            li {
+                font-size: 0.875rem;
+                list-style: none;
+
+                a {
+                    color: $light-grey;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    padding: 4px 0 !important;
+                }
+            }
+        }
+    }
+
+    .microsite-links {
+        padding-top: 100px;
+    }
 }
+
+// End of Footer

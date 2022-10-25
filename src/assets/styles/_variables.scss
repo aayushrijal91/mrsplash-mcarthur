@@ -4,6 +4,7 @@ $secondary: #CF4275;
 $tertiary: #3729C2;
 $dark: #393A41;
 $off-grey: #F1F6F8;
+$light-grey: #6f6f6f;
 $light: #e5e5e5;
 $white: #ffffff;
 $black: #000000;
@@ -16,6 +17,7 @@ $theme-colors: map-merge((
     "secondary": $secondary,
     "tertiary": $tertiary,
     "off-grey": $off-grey,
+    "light-grey": $light-grey,
     "white": $white,
     "black": $black,
         ),
@@ -37,8 +39,8 @@ $container-max-widths: (
     sm: 540px,
     md: 740px,
     lg: 1280px,
-    xl: 1442px,
-    xxl: 1628px,
+    xl: 1441px,
+    xxl: 1442px,
     ) !default;
 
 $spacer: 1rem !default;
@@ -71,8 +73,11 @@ $spacers: map-merge((1: $spacer * 0.25,
 );
 
 $font-sizes: (
+    72: 72px,
     48: 48px,
     32: 32px,
+    30: 30px,
+    24: 24px,
     18: 18px,
 );
 
