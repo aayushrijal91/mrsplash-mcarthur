@@ -14,7 +14,7 @@
                                     $icon = get_sub_field('icon');
                                     $title  = get_sub_field('title');
                                 ?>
-                                    <div class="row align-items-center pt-1 pb-2">
+                                    <div class="row align-items-center py-2">
                                         <div class="col-auto"><img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>"></div>
                                         <div class="col-auto fs-36 fw-700"><?= $title ?></div>
                                     </div>

@@ -107,7 +107,7 @@ header {
 
         .sub_heading {
             padding: 30px 0;
-            
+
             span {
                 font-weight: 700;
             }
@@ -163,3 +163,24 @@ footer {
 }
 
 // End of Footer
+
+// Start of Section Shortcuts
+.section_shortcuts {
+    padding: 188px 0;
+
+    .shortcut_card {
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 30px 24px 60px;
+        color: $white;
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 500px;
+    }
+}
+
+// End of Section Shortcuts

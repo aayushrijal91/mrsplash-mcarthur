@@ -88,12 +88,12 @@
         </div>
         <div class="microsite-links">
             <?php if (have_rows('microsites', 'options')) : ?>
-                <div class="row row-cols-auto gx-2 gy-3 justify-content-center">
+                <div class="row gx-2 gy-3 justify-content-center">
                     <?php while (have_rows('microsites', 'options')) : the_row();
                         $img = get_sub_field('image');
                         $url = get_sub_field('url');
                     ?>
-                        <div class="col">
+                        <div class="col-auto">
                             <a href="<?= $url ?>" target="_blank"><img src="<?= $img['url'] ?>" alt="<?= $img['url'] ?>"></a>
                         </div>
                     <?php endwhile; ?>

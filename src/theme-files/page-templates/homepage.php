@@ -9,7 +9,8 @@ get_template_part('parts/section', 'banner_home');
 ?>
 
 <div class="homepage">
-    this is homepage
+    this is homepage    
 </div>
 
+<?php get_template_part('parts/section', 'shortcuts') ?>
 <?php get_footer(); ?>
