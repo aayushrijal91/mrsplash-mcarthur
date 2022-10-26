@@ -2,6 +2,7 @@ $primary: #0383BF;
 $primary-light: #3EB8DE;
 $secondary: #CF4275;
 $tertiary: #3729C2;
+$quartinary: #1190CE;
 $dark: #393A41;
 $grey: #36393A;
 $off-grey: #BDC1C2;
@@ -10,13 +11,14 @@ $light: #F1F6F8;
 $white: #ffffff;
 $black: #000000;
 
-$theme-colors: (
+$theme-colors: (    
     ) !default;
 $theme-colors: map-merge((
     "primary": $primary,
     "primary-light": $primary-light,
     "secondary": $secondary,
     "tertiary": $tertiary,
+    "quartinary": $quartinary,
     "dark": $dark,
     "grey": $grey,
     "off-grey": $off-grey,
@@ -134,3 +136,5 @@ $utilities: map-merge(("line-height":(property: line-height,
                 values: (1: 0.01em,
                     2: -0.2em))), $utilities
 );
+
+$enable-negative-margin: true;

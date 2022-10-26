@@ -122,6 +122,8 @@ header {
 // Start of Homepage
 .homepage {
     section.section_1 {
+        padding-top: 100px;
+
         .deals_card {
             padding: 55px;
             display: flex;
@@ -167,6 +169,75 @@ header {
                 }
             }
         }
+    }
+
+    section.section_2 {
+        padding: 140px 0;
+
+        .hero_heading span {
+            color: $primary;
+        }
+
+        .socials {
+            background: linear-gradient(180deg, rgba(217, 217, 217, 0.5) 0%, rgba(213, 212, 212, 0.5) 100%);
+            border-radius: 20px;
+            padding: 79px 60px 60px;
+            margin-top: -103px;
+
+            .social_card {
+                height: 250px;
+                background: $primary;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 20px;
+                padding: 30px;
+                display: flex;
+                align-items: end;
+                overflow: hidden;
+                filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+
+                .social_button {
+                    text-decoration: none;
+                    color: $white;
+                    height: 60px;
+                    border-radius: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                    line-height: 1;
+
+                    &.youtube {
+                        background: red;
+                    }
+
+                    &.instagram {
+                        background: linear-gradient(90deg, #4862C9 0%, #B131BA 31.77%, #FF6841 66.15%, #FFBD50 100%);
+                    }
+
+                    &.facebook {
+                        background: #1877F2;
+                    }
+
+                    &.tiktok {
+                        background: linear-gradient(90deg, #FE2B54 0%, #9D58BD 48.96%, #10E2DB 100%);
+                    }
+                }
+            }
+        }
+    }
+
+    section.section_3 {
+        box-shadow: 0px 5.32594px 26.6297px rgba(0, 0, 0, 0.1);
+        border-radius: 26.6297px;
+        background-color: $quartinary;
+        color: $white;
+        padding: 207px 0;
+        background-position: right center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
 

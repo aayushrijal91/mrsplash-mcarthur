@@ -65,8 +65,8 @@ get_template_part('parts/section', 'banner_home');
                 <div class="col-lg-6">
                     <div class="deals_card h-100 bg-primary rounded-20 shadow">
                         <div class="pb-5">
-                            <div class="fs-64 text-white fw-700 lh-1">Recieve 20% Off, Always</div>
-                            <div class="text-white">Become A Mr Splash VIP Member</div>
+                            <div class="fs-64 text-white fw-700 lh-1"><?= $section_1_2['title'] ?></div>
+                            <div class="text-white pt-3"><?= $section_1_2['sub_title'] ?></div>
                         </div>
                         <div><a href="<?= $section_1_2['button']['url'] ?>" class="btn rounded-pill btn-secondary d-inline-flex text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_1_2['button']['title'] ?></a></div>
                     </div>
@@ -76,9 +76,52 @@ get_template_part('parts/section', 'banner_home');
     </section>
 
     <section class="section_2">
+        <?php $section_2 = get_field('section_2'); ?>
+        <div class="container">
+            <div class="row align-items-center gx-lg-0">
+                <div class="col-lg-auto">
+                    <img src="<?= get_template_directory_uri() ?>/images/lib/family-in-laptop.png" alt="">
+                </div>
+                <div class="col-lg">
+                    <div class="text-grey fs-72 fw-700 lh-1 hero_heading"><?= $section_2['hero_heading'] ?></span></div>
+                    <div class="fs-20 text-light-grey pt-4"><?= $section_2['description'] ?></div>
+                </div>
+            </div>
+            <div class="socials">
+                <div class="row">
+                    <?php
+                    if (have_rows('section_2')) :
+                        while (have_rows('section_2')) : the_row();
+                            if (have_rows('socials')) :
+                                while (have_rows('socials')) : the_row();
+                                    $logo = get_sub_field('logo');
+                                    $bg = get_sub_field('background');
+                                    $button = get_sub_field('button');
+                                    $class = strtolower(get_sub_field('class'));
+                    ?>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="social_card lazyload" data-src="<?= $bg['url'] ?>">
+                                            <a href="<?= $button['url'] ?>" class="social_button <?= $class ?>"><?= $button['title'] ?></a>
+                                        </div>
+                                    </div>
+                    <?php
+                                endwhile;
+                            endif;
+                        endwhile;
+                    endif;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php $section_3 = get_field('section_3'); ?>
+    <section class="section_3 lazyload" data-src="<?= $section_3['background']['url'] ?>">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6"></div>
+                <div class="col-lg-5">
+                    <div class="fs-72 fw-700 lh-1">Working at all times</div>
+                </div>
             </div>
         </div>
     </section>
