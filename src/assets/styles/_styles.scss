@@ -119,6 +119,59 @@ header {
 
 // End of Header
 
+// Start of Homepage
+.homepage {
+    section.section_1 {
+        .deals_card {
+            padding: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            #homepage_deal_1_slider {
+                .slick-dots {
+                    display: flex !important;
+                    bottom: -25px;
+                    list-style-type: none;
+                    justify-content: center;
+
+                    @include media-breakpoint-up(lg) {
+                        justify-content: start;
+                    }
+
+                    li {
+                        margin: 0 5px;
+                        width: 10px;
+                        height: 10px;
+
+                        button:before {
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+
+                    button {
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        padding: 0;
+                        border: none;
+                        background-color: $off-grey;
+                        text-indent: -9999px;
+                        border-radius: 50%;
+                    }
+
+                    li.slick-active button {
+                        background-color: $primary-light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End of Homepage
+
 // Start of Footer
 footer {
     padding: 80px 0 70px;

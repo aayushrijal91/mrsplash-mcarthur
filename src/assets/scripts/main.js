@@ -8,7 +8,14 @@ jQuery(function ($) {
                     duration: 1500,
                 });
                 $(() => {
-
+                    $('#homepage_deal_1_slider').slick({
+                        slidesToShow: 1,
+                        arrows: true,
+                        dots: true,
+                        slidesToScroll: 1,
+                        prevArrow: $("#homepage_deal_prev"),
+                        nextArrow: $("#homepage_deal_next"),
+                    });
                 });
             }, // end misc
         }, // end ui

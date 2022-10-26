@@ -1,47 +1,73 @@
+<?php $footer = get_field('footer', 'options'); ?>
 <footer>
     <div class="container">
-        <div class="quick_contact bg-primary-light">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-auto">
-                    <div class="fs-18">Get Your Free Quote</div>
-                    <div class="fs-48 lh-1 fw-800 pt-3">Book Online for $50 Off</div>
-                </div>
-                <div class="col-lg-2">
-                    <a href="./" class="btn btn-secondary rounded-pill text-white fw-700 fs-18">Book Now</a>
-                </div>
-            </div>
+        <div class="row gy-4">
+            <?php
+            if (have_rows('footer', 'options')) :
+                while (have_rows('footer', 'options')) : the_row();
+                    if (have_rows('cta', 'options')) :
+                        $index = 0;
+                        while (have_rows('cta', 'options')) : the_row();
+                            if ($index > 1) {
+                                $index = 0;
+                            }
+                            $sub_title = get_sub_field('sub_title');
+                            $title = get_sub_field('title');
+                            $button = get_sub_field('button');
+                            $bg_color = ['primary-light', 'primary'];
+            ?>
+                            <div class="col-12">
+                                <div class="quick_contact bg-<?= $bg_color[$index] ?>">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="fs-18"><?= $sub_title ?></div>
+                                            <div class="fs-48 lh-1 fw-800 pt-3"><?= $title ?></div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <a href="<?= $button['url'] ?>" class="btn btn-secondary rounded-pill text-white fw-700 fs-18"><?= $button['title'] ?></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            <?php
+                            $index++;
+                        endwhile;
+                    endif;
+                endwhile;
+            endif;
+            ?>
         </div>
-        <div class="quick_contact bg-primary mt-4">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-auto">
-                    <div class="fs-18">Become A VIP Member</div>
-                    <div class="fs-48 lh-1 fw-800 pt-3">20% Off, Always</div>
-                </div>
-                <div class="col-lg-2">
-                    <a href="./" class="btn btn-secondary rounded-pill text-white fw-700 fs-18">Become A Member</a>
-                </div>
-            </div>
-        </div>
+
         <div class="pt-7">
             <div class="row align-items-center justify-content-between">
                 <div class="col-auto">
                     <a href="./">
-                        <img src="<?= get_field('footer_logo', 'options')['url'] ?>" alt="<?= get_field('footer_logo', 'options')['alt'] ?>">
+                        <img src="<?= $footer['logo']['url'] ?>" alt="<?= $footer['logo']['alt'] ?>">
                     </a>
                 </div>
-                <?php if (have_rows('footer_cta', 'options')) : ?>
-                    <div class="col-auto">
-                        <div class="row align-items-center gx-xxl-5">
-                            <?php while (have_rows('footer_cta', 'options')) : the_row();
-                                $img = get_sub_field('image');
-                            ?>
-                                <div class="col-auto">
-                                    <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>">
-                                </div>
-                            <?php endwhile; ?>
+                <?php
+                if (have_rows('footer', 'options')) :
+                    while (have_rows('footer', 'options')) : the_row();
+                ?>
+                        <div class="col-auto">
+                            <div class="row align-items-center gx-xxl-5">
+                                <?php
+                                if (have_rows('reviews', 'options')) :
+                                    while (have_rows('reviews', 'options')) : the_row();
+                                        $img = get_sub_field('image');
+                                ?>
+                                        <div class="col-auto">
+                                            <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>">
+                                        </div>
+                                <?php
+                                    endwhile;
+                                endif; ?>
+                            </div>
                         </div>
-                    </div>
-                <?php endif; ?>
+                <?php
+                    endwhile;
+                endif;
+                ?>
             </div>
         </div>
         <hr>
@@ -87,18 +113,24 @@
             </div>
         </div>
         <div class="microsite-links">
-            <?php if (have_rows('microsites', 'options')) : ?>
-                <div class="row gx-2 gy-3 justify-content-center">
-                    <?php while (have_rows('microsites', 'options')) : the_row();
-                        $img = get_sub_field('image');
-                        $url = get_sub_field('url');
-                    ?>
-                        <div class="col-auto">
-                            <a href="<?= $url ?>" target="_blank"><img src="<?= $img['url'] ?>" alt="<?= $img['url'] ?>"></a>
-                        </div>
-                    <?php endwhile; ?>
-                </div>
-            <?php endif; ?>
+            <?php
+            if (have_rows('footer', 'options')) :
+                while (have_rows('footer', 'options')) : the_row(); ?>
+                    <div class="row gx-2 gy-3 justify-content-center">
+                        <?php if (have_rows('microsites', 'options')) :
+                            while (have_rows('microsites', 'options')) : the_row();
+                                $img = get_sub_field('image');
+                                $url = get_sub_field('url');
+                        ?>
+                                <div class="col-auto">
+                                    <a href="<?= $url ?>" target="_blank"><img src="<?= $img['url'] ?>" alt="<?= $img['url'] ?>"></a>
+                                </div>
+                        <?php endwhile;
+                        endif; ?>
+                    </div>
+            <?php endwhile;
+            endif;
+            ?>
         </div>
     </div>
 </footer>

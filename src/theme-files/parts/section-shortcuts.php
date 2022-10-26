@@ -20,7 +20,7 @@
                                 <div class="shortcut_card lazyload bg-<?= $bg_color[$index] ?>" data-src="<?= $bg_img['url'] ?>">
                                     <div class="fs-36 fw-700 lh-1"><?= $title ?></div>
                                     <div>
-                                        <a href="<?= $button['url'] ?>" class="btn rounded-pill btn-<?= $bg_color[$index] ?> d-inline-flex text-white fs-18 fw-700 px-4 px-xl-6"><?= $button['title'] . $index ?></a>
+                                        <a href="<?= $button['url'] ?>" class="btn rounded-pill btn-<?= $bg_color[$index] ?> d-inline-flex text-white fs-18 fw-700 px-4 px-xl-6"><?= $button['title'] ?></a>
                                     </div>
                                 </div>
                             </div>
