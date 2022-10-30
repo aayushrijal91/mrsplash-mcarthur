@@ -11,20 +11,20 @@ $light: #F1F6F8;
 $white: #ffffff;
 $black: #000000;
 
-$theme-colors: (    
+$theme-colors: (
     ) !default;
-$theme-colors: map-merge((
-    "primary": $primary,
-    "primary-light": $primary-light,
-    "secondary": $secondary,
-    "tertiary": $tertiary,
-    "quartinary": $quartinary,
-    "dark": $dark,
-    "grey": $grey,
-    "off-grey": $off-grey,
-    "light-grey": $light-grey,
-    "white": $white,
-    "black": $black,
+$theme-colors: map-merge(("primary": $primary,
+            "primary-light": $primary-light,
+            "secondary": $secondary,
+            "tertiary": $tertiary,
+            "quartinary": $quartinary,
+            "dark": $dark,
+            "grey": $grey,
+            "off-grey": $off-grey,
+            "light-grey": $light-grey,
+            "light": $light,
+            "white": $white,
+            "black": $black,
         ),
         $theme-colors
 );
@@ -100,7 +100,7 @@ $utilities: map-merge(("line-height":(property: line-height,
                     2:2,
                     "111":1.11,
                     "12":1.2,
-                )),
+                    "1_65": 1.65)),
             "rounded": (property: border-radius,
                 class: rounded,
                 responsive: true,

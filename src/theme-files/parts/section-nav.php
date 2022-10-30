@@ -63,7 +63,7 @@
                     )); ?>
                     <div class="d-flex align-items-center ms-auto nav-btns">
                         <div>
-                            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn btn-off-grey text-primary rounded-2 p-2 fs-18 fw-600 lh-1">
+                            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn btn-light text-primary rounded-2 p-2 fs-18 fw-600 lh-1">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 6.96151H14.6078C14.6061 5.48498 14.0188 4.06939 12.9748 3.02532C11.9308 1.98125 10.5153 1.39396 9.03879 1.3923V0C10.8844 0.00202691 12.6538 0.736121 13.9589 2.04122C15.2639 3.34632 15.998 5.11583 16 6.96151Z" fill="#0383BF" />
                                     <path d="M13.2155 6.96151H11.8233C11.8233 6.22299 11.5299 5.51472 11.0077 4.9925C10.4855 4.47029 9.77728 4.17691 9.03879 4.17691V2.78461C10.1462 2.78571 11.2079 3.22613 11.991 4.00921C12.774 4.7923 13.2144 5.85407 13.2155 6.96151Z" fill="#0383BF" />

@@ -120,7 +120,49 @@ get_template_part('parts/section', 'banner_home');
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <div class="fs-72 fw-700 lh-1">Working at all times</div>
+                    <div class="fs-72 fw-700 lh-1"><?= $section_3['heading'] ?></div>
+                    <div class="fs-20 lh-1_65 py-4"><?= $section_3['description'] ?></div>
+                    <div class="row pt-4">
+                        <div class="col-lg-5">
+                            <a href="<?= $section_3['button_1']['url'] ?>" class="btn rounded-pill btn-primary-light text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_3['button_1']['title'] ?></a>
+                        </div>
+                        <div class="col-lg-5">
+                            <a href="<?= $section_3['button_2']['url'] ?>" class="btn w-100 rounded-pill border-2 border-white  text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_3['button_2']['title'] ?></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_4">
+        <?php $section_4 = get_field('section_4'); ?>
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-5">
+                    <img src="<?= $section_4['hero_image']['url'] ?>" class="rounded-20 w-100 h-100" alt="<?= $section_4['hero_image']['alt'] ?>">
+                </div>
+                <div class="col-lg col-xl-6">
+                    <div class="hero_heading fs-72 fw-800 lh-1"><?= $section_4['heading'] ?></div>
+                    <div class="services_slider" id="homepage_services_slider">
+                        <?php if (have_rows('section_4')) :
+                            while (have_rows('section_4')) : the_row();
+                                if (have_rows('services_slider')) :
+                                    while (have_rows('services_slider')) : the_row();
+                                        $img = get_sub_field('image');
+                                        $title = get_sub_field('title');
+                        ?>
+                                        <div class="services_slider_content">
+                                            <img src="<?= $img['url'] ?>" class="rounded-20 w-100" alt="<?= $img['alt'] ?>">
+                                            <div class="title text-center fs-18 pt-2"><?= $title ?></div>
+                                        </div>
+                        <?php
+                                    endwhile;
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

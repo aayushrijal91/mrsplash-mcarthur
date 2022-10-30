@@ -10,12 +10,18 @@ jQuery(function ($) {
                 $(() => {
                     $('#homepage_deal_1_slider').slick({
                         slidesToShow: 1,
+                        slidesToScroll: 1,
                         arrows: true,
                         dots: true,
                         slidesToScroll: 1,
                         prevArrow: $("#homepage_deal_prev"),
                         nextArrow: $("#homepage_deal_next"),
                     });
+
+                    $('#homepage_services_slider').slick({
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    })
                 });
             }, // end misc
         }, // end ui
