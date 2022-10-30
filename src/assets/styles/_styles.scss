@@ -114,7 +114,22 @@ header {
         }
     }
 
-    &.subpage_header {}
+    &.subpage_header {
+        .container {
+            padding: 117px 0;
+            color: $white;
+        }
+
+        span {
+            color: $secondary;
+        }
+
+        .splash {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
 }
 
 // End of Header
@@ -308,6 +323,47 @@ header {
 }
 
 // End of Homepage
+
+// Start of About us page
+.about_us {
+    section.section_1 {
+        padding: 188px 0;
+
+        .hero_heading {
+            span {
+                color: $primary;
+            }
+        }
+    }
+
+    section.section_2 {
+        border-radius: 20px;
+        background-color: $primary;
+        color: $white;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding: 104px 16px;
+    }
+
+    section.section_3 {
+        padding-top: 188px;
+
+        .hero_heading span {
+            color: $primary;
+        }
+
+        .why_choose_card {
+            height: 100%;
+            padding: 60px;
+            background: $white;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+    }
+}
+
+// End of About us page
 
 // Start of Footer
 footer {

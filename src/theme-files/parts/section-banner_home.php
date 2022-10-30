@@ -1,13 +1,14 @@
-<?php $banner = get_field('banner'); ?>
+<?php $banner = get_field('banner');
+$homepage_banner = get_field('banner'); ?>
 <?php get_template_part('parts/section', 'nav'); ?>
 <header class="homepage_header">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="hero_heading fs-72 lh-1 fw-700"><?= $banner['heading'] ?></div>
-                <div class="sub_heading fs-30 lh-1"><?= $banner['sub_heading'] ?></div>
-                <?php if (have_rows('banner')) :
-                    while (have_rows('banner')) : the_row();
+                <h1 class="hero_heading fs-72 lh-1 fw-700"><?= $banner['heading'] ?></h1>
+                <div class="sub_heading fs-30 lh-1"><?= $homepage_banner['sub_heading'] ?></div>
+                <?php if (have_rows('homepage_banner')) :
+                    while (have_rows('homepage_banner')) : the_row();
                         if (have_rows('cta')) : ?>
                             <div class="pt-5">
                                 <?php while (have_rows('cta')) : the_row();

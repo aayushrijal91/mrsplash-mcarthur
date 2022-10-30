@@ -118,8 +118,8 @@ get_template_part('parts/section', 'banner_home');
     <?php $section_3 = get_field('section_3'); ?>
     <section class="section_3 lazyload" data-src="<?= $section_3['background']['url'] ?>">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
+            <div class="row gx-xl-8">
+                <div class="col-lg-6">
                     <div class="fs-72 fw-700 lh-1"><?= $section_3['heading'] ?></div>
                     <div class="fs-20 lh-1_65 py-4"><?= $section_3['description'] ?></div>
                     <div class="row pt-4">
