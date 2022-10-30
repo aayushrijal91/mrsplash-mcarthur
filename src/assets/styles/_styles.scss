@@ -294,6 +294,17 @@ header {
             }
         }
     }
+
+    section.section_5 {
+        box-shadow: 0px 5.32594px 26.6297px rgba(0, 0, 0, 0.1);
+        border-radius: 26.6297px;
+        background-color: $primary-light;
+        color: $white;
+        padding: 207px 0;
+        background-position: left center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 // End of Homepage

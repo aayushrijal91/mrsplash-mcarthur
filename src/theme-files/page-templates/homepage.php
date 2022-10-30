@@ -163,6 +163,20 @@ get_template_part('parts/section', 'banner_home');
                         endif;
                         ?>
                     </div>
+                    <a href="<?= $section_4['button']['url'] ?>" class="btn rounded-pill d-inline-flex btn-primary-light text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_4['button']['title'] ?></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php $section_5 = get_field('section_5'); ?>
+    <section class="section_5 lazyload" data-src="<?= $section_5['background']['url'] ?>">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-5">
+                    <div class="fs-72 fw-700 lh-1"><?= $section_5['heading'] ?></div>
+                    <div class="fs-20 lh-1_65 py-4"><?= $section_5['description'] ?></div>
+                    <a href="<?= $section_5['button']['url'] ?>" class="btn rounded-pill btn-primary d-inline-flex text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_5['button']['title'] ?></a>
                 </div>
             </div>
         </div>
