@@ -1,11 +1,13 @@
-@import url("https://use.typekit.net/htw4amb.css");
+@import url("https://use.typekit.net/enf0iwy.css");
 
 $font-articulat: "articulat-cf", sans-serif;
+$font-articulat-heavy: "articulat-heavy-cf", sans-serif;
 
 $font-body: $font-articulat;
 
 $font-families: (
     "articulat": "articulat-cf",
+    "articulat-heavy": "articulat-heavy-cf",
 );
 
 @each $name, $font-family in $font-families {
@@ -13,19 +15,3 @@ $font-families: (
         font-family: $font-family, sans-serif;
     }
 }
-
-// $asset-path: "../webfonts/";
-
-// /* Fonts includer */
-// @mixin font-face($font-family, $font-file, $weight: "normal", $style: "normal") {
-//     @font-face {
-//         font-family: $font-family;
-//         src: url($asset-path + $font-file + ".woff") format("woff"),
-//             url($asset-path + $font-file + ".woff2") format("woff2");
-//         font-weight: $weight;
-//         font-style: $style;
-//     }
-// }
-
-// @include font-face("FreeSans", "FreeSans", 400);
-// @include font-face("FreeSans", "FreeSansBold", 700);

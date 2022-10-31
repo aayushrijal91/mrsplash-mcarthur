@@ -365,6 +365,72 @@ header {
 
 // End of About us page
 
+// Start of Sercies page
+.services_page {
+    section.services_slider {
+        padding: 188px 0;
+
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            height: inherit;
+            margin: 0 31px;
+        }
+
+        .service_slider_card {
+            border-radius: 20px;
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: contain;
+            overflow: hidden;
+
+            .service_slider_card_inner {
+                filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+                padding: 16px 60px;
+                background: imgUrl('service_card.png') left center;
+                background-size: contain;
+                color: $white;
+                height: 100%;
+                min-height: 344px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    section.services_list {
+        .service_card {
+            border-radius: 20px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: container;
+            width: 100%;
+            filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+
+            .service_card_inner {
+                color: $white;
+                min-height: 255px;
+                width: 100%;
+                padding: 30px;
+                text-align: center;
+                background: imgUrl('service_splash.png') center top;
+                background-size: contain;
+                font-size: 1.25rem;
+                font-weight: 700;
+                text-transform: capitalize;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// End of Sercies page
+
 // Start of Footer
 footer {
     padding: 80px 0 70px;
