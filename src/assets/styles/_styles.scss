@@ -115,8 +115,13 @@ header {
     }
 
     &.subpage_header {
+        min-height: 386px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
         .container {
-            padding: 117px 0;
+            padding: 24px 0;
             color: $white;
         }
 
@@ -126,7 +131,7 @@ header {
 
         .splash {
             position: absolute;
-            right: 0;
+            right: 13%;
             bottom: 0;
         }
     }
