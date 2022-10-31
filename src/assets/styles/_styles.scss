@@ -368,7 +368,7 @@ header {
 // Start of Sercies page
 .services_page {
     section.services_slider {
-        padding: 188px 0;
+        padding: 188px 0 158px;
 
         .slick-track {
             display: flex;
@@ -377,6 +377,44 @@ header {
         .slick-slide {
             height: inherit;
             margin: 0 31px;
+        }
+
+        .slick-dots {
+            display: flex !important;
+            bottom: -44px;
+            left: 13%;
+            list-style-type: none;
+            justify-content: center;
+
+            @include media-breakpoint-up(lg) {
+                justify-content: start;
+            }
+
+            li {
+                margin: 0 5px;
+                width: 10px;
+                height: 10px;
+
+                button:before {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            button {
+                display: block;
+                width: 10px;
+                height: 10px;
+                padding: 0;
+                border: none;
+                background-color: $off-grey;
+                text-indent: -9999px;
+                border-radius: 50%;
+            }
+
+            li.slick-active button {
+                background-color: $primary-light;
+            }
         }
 
         .service_slider_card {

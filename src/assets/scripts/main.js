@@ -30,6 +30,9 @@ jQuery(function ($) {
                         arrows: true,
                         centerPadding: '229px',
                         autoplay: true,
+                        dots: true,
+                        prevArrow: $("#services_prev"),
+                        nextArrow: $("#services_next"),
                     })
                 });
             }, // end misc
