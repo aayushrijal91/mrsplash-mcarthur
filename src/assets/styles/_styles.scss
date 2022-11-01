@@ -474,6 +474,33 @@ header {
 
 // End of Sercies page
 
+// Start of Inner Service Page
+.inner_service_page {
+
+    section.section_1,
+    section.section_3 {
+        padding: 188px 0;
+
+        .hero_heading {
+            span {
+                color: $primary;
+            }
+        }
+    }
+
+    section.section_2 {
+        border-radius: 20px;
+        background-color: $primary;
+        color: $white;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding: 104px 16px;
+    }
+}
+
+// End of Inner Service Page
+
 // Start of Footer
 footer {
     padding: 80px 0 70px;
@@ -519,7 +546,7 @@ footer {
 
 // End of Footer
 
-// Start of Section Shortcuts
+// Start of Part Shortcuts
 .section_shortcuts {
     padding: 188px 0;
 
@@ -538,4 +565,65 @@ footer {
     }
 }
 
-// End of Section Shortcuts
+// End of Part Shortcuts
+
+// Start of Part ContactUsForm
+.contactUsForm {
+    .contactUsForm_card {
+        padding: 60px;
+        color: $white;
+        filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+
+        form {
+            .input-group {
+                border-radius: 2px;
+                overflow: hidden;
+                background: $white;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            .input-group-text {
+                border: 0;
+                border-radius: 0;
+                background: $white;
+                padding-left: 18px;
+            }
+
+            .wpcf7-form-control-wrap {
+                flex: 1;
+            }
+
+            input {
+                color: $dark;
+                font-size: 1.125rem;
+                min-height: 50px;
+
+                @include media-breakpoint-up(lg) {
+                    min-height: 60px;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+                &::placeholder {
+                    color: $off-grey;
+                }
+
+                option {
+                    color: $grey;
+                    font-weight: 700;
+                }
+            }
+
+            .form-control {
+                padding: 0 4px;
+                border: 0;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+// End of Part ContactUsForm
