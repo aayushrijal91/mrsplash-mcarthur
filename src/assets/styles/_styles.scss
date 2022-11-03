@@ -476,6 +476,7 @@ header {
 
 // Start of Inner Service Page
 .inner_service_page {
+
     section.section_1,
     section.section_3 {
         padding: 188px 0;
@@ -537,7 +538,9 @@ header {
 
 // Start of Areas Page
 .areas_page {
-    section.section_1, section.section_3 {
+
+    section.section_1,
+    section.section_3 {
         border-radius: 20px;
         background: $white;
         padding: 60px;
@@ -561,12 +564,30 @@ header {
             }
         }
     }
-
-    section.section_3 {
-    }
 }
 
 // End of Areas Page
+
+// Start of Suburb Page
+.suburb_page {
+    .hero_heading span {
+        color: $primary;
+    }
+
+    section.section_1 {
+        padding: 188px 0;
+
+    }
+
+    section.services {
+        background: $white;
+        padding: 80px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+}
+
+// End of Suburb Page
 
 // Start of Footer
 footer {
