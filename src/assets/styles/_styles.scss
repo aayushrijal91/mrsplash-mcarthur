@@ -552,6 +552,14 @@ header {
 
     section.section_2 {
         padding: 188px 0;
+
+        a.suburb_hyperlink {
+            transition: 0.2s all;
+
+            &:hover {
+                color: $secondary !important;
+            }
+        }
     }
 
     section.section_3 {

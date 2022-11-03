@@ -113,24 +113,18 @@
             </div>
         </div>
         <div class="microsite-links">
-            <?php
-            if (have_rows('footer', 'options')) :
-                while (have_rows('footer', 'options')) : the_row(); ?>
-                    <div class="row gx-2 gy-3 justify-content-center">
-                        <?php if (have_rows('microsites', 'options')) :
-                            while (have_rows('microsites', 'options')) : the_row();
-                                $img = get_sub_field('image');
-                                $url = get_sub_field('url');
-                        ?>
-                                <div class="col-auto">
-                                    <a href="<?= $url ?>" target="_blank"><img src="<?= $img['url'] ?>" alt="<?= $img['url'] ?>"></a>
-                                </div>
-                        <?php endwhile;
-                        endif; ?>
-                    </div>
-            <?php endwhile;
-            endif;
-            ?>
+            <?php if (have_rows('microsites', 'options')) : ?>
+                <div class="row gx-2 gy-3 justify-content-center">
+                    <?php while (have_rows('microsites', 'options')) : the_row();
+                        $logo = get_sub_field('logo');
+                        $url = get_sub_field('url');
+                    ?>
+                        <div class="col-auto">
+                            <a href="<?= $url ?>" target="_blank"><img src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>"></a>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </footer>
