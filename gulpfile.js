@@ -4,7 +4,7 @@ const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
+// const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
@@ -60,7 +60,7 @@ function styles() {
             browserSync.notify('<pre style="text-align: left">' + err.message + '</pre>', 10000);
             this.emit('end');
         }))
-        .pipe(autoprefixer())
+        // .pipe(autoprefixer())
         .pipe(cssnano())
         .pipe(gulp.dest(destinations.styles))
         .pipe(browserSync.stream({
