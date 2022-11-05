@@ -579,11 +579,49 @@ header {
 
     }
 
-    section.services {
+    section.suburb_card {
         background: $white;
         padding: 80px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
+
+        .service {
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 52px 60px;
+            color: $white;
+            min-height: 525px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        &.section_3 {
+            margin: 188px 0;
+
+            .description {
+                color: $light-grey;
+                margin-top: 60px;
+
+                ul {
+                    columns: 3;
+                    list-style-type: disc;
+                    margin-bottom: 0;
+
+                    li {
+                        padding: 10px 0;
+                        position: relative;
+
+                        &::before {
+                            content: "\2022";
+                            position: absolute;
+                            left: -1rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
