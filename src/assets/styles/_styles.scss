@@ -101,10 +101,6 @@ header {
         padding: 150px 0;
         color: $white;
 
-        .hero_heading span {
-            color: $secondary;
-        }
-
         .sub_heading {
             padding: 30px 0;
 
@@ -194,10 +190,6 @@ header {
     section.section_2 {
         padding: 140px 0;
 
-        .hero_heading span {
-            color: $primary;
-        }
-
         .socials {
             background: linear-gradient(180deg, rgba(217, 217, 217, 0.5) 0%, rgba(213, 212, 212, 0.5) 100%);
             border-radius: 20px;
@@ -263,12 +255,6 @@ header {
     section.section_4 {
         padding: 188px 0;
 
-        .hero_heading {
-            span {
-                color: $primary;
-            }
-        }
-
         .services_slider {
             padding: 60px 0;
 
@@ -333,12 +319,6 @@ header {
 .about_us {
     section.section_1 {
         padding: 188px 0;
-
-        .hero_heading {
-            span {
-                color: $primary;
-            }
-        }
     }
 
     section.section_2 {
@@ -353,10 +333,6 @@ header {
 
     section.section_3 {
         padding-top: 188px;
-
-        .hero_heading span {
-            color: $primary;
-        }
 
         .why_choose_card {
             height: 100%;
@@ -480,12 +456,6 @@ header {
     section.section_1,
     section.section_3 {
         padding: 188px 0;
-
-        .hero_heading {
-            span {
-                color: $primary;
-            }
-        }
     }
 
     section.section_2 {
@@ -538,19 +508,12 @@ header {
 
 // Start of Areas Page
 .areas_page {
-
     section.section_1,
     section.section_3 {
         border-radius: 20px;
         background: $white;
         padding: 60px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    section.section_1 {
-        .hero_heading span {
-            color: $primary;
-        }
     }
 
     section.section_2 {
@@ -570,13 +533,8 @@ header {
 
 // Start of Suburb Page
 .suburb_page {
-    .hero_heading span {
-        color: $primary;
-    }
-
     section.section_1 {
         padding: 188px 0;
-
     }
 
     section.suburb_card {
@@ -626,6 +584,101 @@ header {
 }
 
 // End of Suburb Page
+
+// Start of Blogs Page
+.blogs_page {
+    margin-top: 188px;
+
+    .blog_card {
+        filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+        background: $white;
+        overflow: hidden;
+
+        .background {
+            width: 100%;
+            height: 309px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: $light-grey;
+        }
+
+        .main_content {
+            padding: 37px 27px 30px;
+
+            .date {
+                height: 75px;
+                width: 75px;
+                top: -37.5px;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                padding: 22px 0 14px;
+            }
+        }
+    }
+}
+
+// End of Blogs Page
+
+// Start of Single Post
+.single_post_page {
+    section.section_1 {
+        padding: 188px 0;
+    }
+
+    section.post_card {
+        background: $white;
+        padding: 80px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+
+        .service {
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 52px 60px;
+            color: $white;
+            min-height: 525px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        &.further_assistance {
+            margin: 188px 0;
+
+            .description {
+                color: $light-grey;
+                margin-top: 60px;
+
+                ul {
+                    columns: 3;
+                    list-style-type: disc;
+                    margin-bottom: 0;
+
+                    li {
+                        padding: 10px 0;
+                        position: relative;
+
+                        &::before {
+                            content: "\2022";
+                            position: absolute;
+                            left: -1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_description a {
+        font-weight: 700;
+    }
+}
+
+// End of Single Post
 
 // Start of Footer
 footer {

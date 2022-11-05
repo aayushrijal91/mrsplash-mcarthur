@@ -48,7 +48,7 @@ get_template_part('parts/section', 'banner');
                             <div class="service lazyload bg-<?= $bg_color ?> rounded-20<?= $index != 0 ? ' mt-4' : '' ?>" data-src="<?= $bg_image['url'] ?>">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="fs-36 fw-700 lh-1"><?= $title ?></div>
+                                        <div class="fs-36 fw-700 lh-1 text-capitalize"><?= $title ?></div>
                                         <div class="fs-20 lh-1_25 pt-4"><?= $description ?></div>
                                     </div>
                                 </div>
