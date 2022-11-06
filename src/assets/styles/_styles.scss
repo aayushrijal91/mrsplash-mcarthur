@@ -508,6 +508,7 @@ header {
 
 // Start of Areas Page
 .areas_page {
+
     section.section_1,
     section.section_3 {
         border-radius: 20px;
@@ -624,7 +625,7 @@ header {
 
 // Start of Single Post
 .single_post_page {
-    section.section_1 {
+    section.intro {
         padding: 188px 0;
     }
 
@@ -675,6 +676,62 @@ header {
 
     .contact_description a {
         font-weight: 700;
+    }
+
+    .template_2 {
+        section.section_1 {
+            padding: 123px 16px;
+        }
+
+        section.section_1, section.section_4 {
+            border-radius: 20px;
+            color: $white;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        section.section_2 {
+            background: $white;
+            padding: 80px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            margin: 188px 0;
+
+            .benefit_card {
+                background-color: $light;
+                border-radius: 20px;
+                height: 100%;
+                padding: 60px 45px;
+                color: $light-grey;
+                font-weight: 700;
+                text-align: center;
+                font-size: 1.25rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        section.section_4 {
+            padding: 96px 16px 80px;
+            margin: 188px 0;
+        }
+
+        section.section_5 {
+            .feature_card {
+                background-color: $light;
+                border-radius: 20px;
+                height: 100%;
+                padding: 40px 30px;
+                color: $light-grey;
+                font-weight: 700;
+                text-align: center;
+                font-size: 1.25rem;
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 }
 
