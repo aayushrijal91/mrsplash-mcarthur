@@ -101,11 +101,26 @@ header {
         padding: 150px 0;
         color: $white;
 
+        .hero_heading span {
+            color: $secondary;
+        }
+
         .sub_heading {
             padding: 30px 0;
 
             span {
                 font-weight: 700;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            background: radial-gradient(73.65% 190.43% at 85.49% 50%, #19252D 0%, #09141C 100%);
+            padding: 104px 0 0;
+
+            .homepage_cta {
+                .cta_text {
+                    font-size: 1.25rem !important;
+                }
             }
         }
     }
@@ -145,6 +160,10 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            @include media-breakpoint-down(sm) {
+                padding: 24px;
+            }
 
             #homepage_deal_1_slider {
                 .slick-dots {
@@ -190,11 +209,23 @@ header {
     section.section_2 {
         padding: 140px 0;
 
+        @include media-breakpoint-down(sm) {
+            padding: 100px 0;
+
+            .description {
+                font-size: 1rem !important;
+            }
+        }
+
         .socials {
             background: linear-gradient(180deg, rgba(217, 217, 217, 0.5) 0%, rgba(213, 212, 212, 0.5) 100%);
             border-radius: 20px;
-            padding: 79px 60px 60px;
-            margin-top: -103px;
+            padding: 16px;
+
+            @include media-breakpoint-up(md) {
+                margin-top: -103px;
+                padding: 79px 60px 60px;
+            }
 
             .social_card {
                 height: 250px;
@@ -220,6 +251,7 @@ header {
                     font-size: 1.125rem;
                     font-weight: 600;
                     line-height: 1;
+                    padding: 8px 16px;
 
                     &.youtube {
                         background: red;
@@ -236,6 +268,11 @@ header {
                     &.tiktok {
                         background: linear-gradient(90deg, #FE2B54 0%, #9D58BD 48.96%, #10E2DB 100%);
                     }
+
+                    @include media-breakpoint-down(sm) {
+                        height: 42px;
+                        font-size: 0.875rem;
+                    }
                 }
             }
         }
@@ -250,13 +287,30 @@ header {
         background-position: right center;
         background-size: contain;
         background-repeat: no-repeat;
+
+        @include media-breakpoint-down(sm) {
+            padding: 64px 0;
+            background-image: none !important;
+
+            .description {
+                font-size: 1rem !important;
+            }
+        }
     }
 
     section.section_4 {
         padding: 188px 0;
 
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
+
         .services_slider {
             padding: 60px 0;
+
+            @include media-breakpoint-down(sm) {
+                padding: 32px 0;
+            }
 
             .slick-slide {
                 margin: 0 11px;
@@ -310,6 +364,15 @@ header {
         background-position: left center;
         background-size: contain;
         background-repeat: no-repeat;
+
+        @include media-breakpoint-down(sm) {
+            padding: 64px 0;
+            background-image: none !important;
+
+            .description {
+                font-size: 1rem !important;
+            }
+        }
     }
 }
 
@@ -683,7 +746,8 @@ header {
             padding: 123px 16px;
         }
 
-        section.section_1, section.section_4 {
+        section.section_1,
+        section.section_4 {
             border-radius: 20px;
             color: $white;
             background-size: contain;
@@ -747,6 +811,10 @@ footer {
         color: $white;
         border-radius: 20px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+        @include media-breakpoint-down(sm) {
+            padding: 24px;
+        }
     }
 
     hr {
@@ -770,6 +838,10 @@ footer {
                     font-weight: 600;
                     text-decoration: none;
                     padding: 4px 0 !important;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 0.875rem;
+                    }
                 }
             }
         }
@@ -777,6 +849,10 @@ footer {
 
     .microsite-links {
         padding-top: 100px;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 64px;
+        }
     }
 }
 
@@ -785,6 +861,10 @@ footer {
 // Start of Part Shortcuts
 .section_shortcuts {
     padding: 188px 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 100px 0;
+    }
 
     .shortcut_card {
         background-position: center bottom;
@@ -798,6 +878,10 @@ footer {
         flex-direction: column;
         justify-content: space-between;
         min-height: 500px;
+
+        @include media-breakpoint-down(sm) {
+            min-height: 400px;
+        }
     }
 }
 

@@ -18,12 +18,12 @@
             ?>
                             <div class="col-12">
                                 <div class="quick_contact bg-<?= $bg_color[$index] ?>">
-                                    <div class="row justify-content-between align-items-center">
+                                    <div class="row justify-content-between align-items-center gy-5">
                                         <div class="col-auto">
                                             <div class="fs-18"><?= $sub_title ?></div>
                                             <div class="fs-48 lh-1 fw-800 pt-3"><?= $title ?></div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-9 col-lg-3">
                                             <a href="<?= $button['url'] ?>" class="btn btn-secondary rounded-pill text-white fw-700 fs-18"><?= $button['title'] ?></a>
                                         </div>
                                     </div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="pt-7">
-            <div class="row align-items-center justify-content-between">
+            <div class="row align-items-center justify-content-center justify-content-md-between gy-4">
                 <div class="col-auto">
                     <a href="./">
                         <img src="<?= $footer['logo']['url'] ?>" alt="<?= $footer['logo']['alt'] ?>">
@@ -49,14 +49,14 @@
                 if (have_rows('footer', 'options')) :
                     while (have_rows('footer', 'options')) : the_row();
                 ?>
-                        <div class="col-auto">
-                            <div class="row align-items-center gx-xxl-5">
+                        <div class="col-md-auto">
+                            <div class="row align-items-center justify-content-center gy-3 gx-xxl-5">
                                 <?php
                                 if (have_rows('reviews', 'options')) :
                                     while (have_rows('reviews', 'options')) : the_row();
                                         $img = get_sub_field('image');
                                 ?>
-                                        <div class="col-auto">
+                                        <div class="col-6 col-md-auto">
                                             <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>">
                                         </div>
                                 <?php
@@ -119,7 +119,7 @@
                         $logo = get_sub_field('logo');
                         $url = get_sub_field('url');
                     ?>
-                        <div class="col-auto">
+                        <div class="col-6 col-md-auto">
                             <a href="<?= $url ?>" target="_blank"><img src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>"></a>
                         </div>
                     <?php endwhile; ?>

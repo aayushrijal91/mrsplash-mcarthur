@@ -39,7 +39,7 @@ get_template_part('parts/section', 'banner_home');
                             endif;
                             ?>
                         </div>
-                        <div class="row justify-content-between align-items-center">
+                        <div class="row justify-content-between align-items-center pt-5 pt-md-0">
                             <div class="col-auto"><a href="<?= $section_1_1['button']['url'] ?>" class="btn rounded-pill btn-secondary d-inline-flex text-white fs-18 fw-700 px-4 px-xl-6"><?= $section_1_1['button']['title'] ?></a></div>
                             <div class="col-auto">
                                 <div class="row gx-xl-5">
@@ -84,11 +84,11 @@ get_template_part('parts/section', 'banner_home');
                 </div>
                 <div class="col-lg">
                     <div class="text-grey fs-72 fw-700 lh-1 hero_heading"><?= $section_2['hero_heading'] ?></span></div>
-                    <div class="fs-20 text-light-grey pt-4"><?= $section_2['description'] ?></div>
+                    <div class="fs-20 text-light-grey pt-4 description"><?= $section_2['description'] ?></div>
                 </div>
             </div>
             <div class="socials">
-                <div class="row">
+                <div class="row gy-3">
                     <?php
                     if (have_rows('section_2')) :
                         while (have_rows('section_2')) : the_row();
@@ -101,7 +101,12 @@ get_template_part('parts/section', 'banner_home');
                     ?>
                                     <div class="col-md-6 col-lg-3">
                                         <div class="social_card lazyload" data-src="<?= $bg['url'] ?>">
-                                            <a href="<?= $button['url'] ?>" class="social_button <?= $class ?>"><?= $button['title'] ?></a>
+                                            <a href="<?= $button['url'] ?>" class="social_button <?= $class ?>">
+                                                <div class="row align-items-center">
+                                                    <div class="col-auto text-center"><img src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>"></div>
+                                                    <div class="col text-center"><?= $button['title'] ?></div>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                     <?php
@@ -121,12 +126,13 @@ get_template_part('parts/section', 'banner_home');
             <div class="row gx-xl-8">
                 <div class="col-lg-6">
                     <div class="fs-72 fw-700 lh-1"><?= $section_3['heading'] ?></div>
-                    <div class="fs-20 lh-1_65 py-4"><?= $section_3['description'] ?></div>
-                    <div class="row pt-4">
-                        <div class="col-lg-5">
+                    <img src="<?= $section_3['background']['url'] ?>" alt="<?= $section_3['background']['url'] ?>" class="d-md-none py-4">
+                    <div class="fs-20 lh-1_65 py-3 py-md-4 description"><?= $section_3['description'] ?></div>
+                    <div class="row pt-md-4">
+                        <div class="col-6 col-lg-5">
                             <a href="<?= $section_3['button_1']['url'] ?>" class="btn rounded-pill btn-primary-light text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_3['button_1']['title'] ?></a>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-6 col-lg-5">
                             <a href="<?= $section_3['button_2']['url'] ?>" class="btn w-100 rounded-pill border-2 border-white  text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_3['button_2']['title'] ?></a>
                         </div>
                     </div>
@@ -138,7 +144,7 @@ get_template_part('parts/section', 'banner_home');
     <section class="section_4">
         <?php $section_4 = get_field('section_4'); ?>
         <div class="container">
-            <div class="row align-items-center justify-content-between">
+            <div class="row align-items-center justify-content-between gy-5">
                 <div class="col-lg-5">
                     <img src="<?= $section_4['hero_image']['url'] ?>" class="rounded-20 w-100 h-100" alt="<?= $section_4['hero_image']['alt'] ?>">
                 </div>
@@ -175,7 +181,8 @@ get_template_part('parts/section', 'banner_home');
             <div class="row justify-content-end">
                 <div class="col-lg-5">
                     <div class="fs-72 fw-700 lh-1"><?= $section_5['heading'] ?></div>
-                    <div class="fs-20 lh-1_65 py-4"><?= $section_5['description'] ?></div>
+                    <img src="<?= $section_5['background']['url'] ?>" alt="<?= $section_5['background']['url'] ?>" class="d-md-none my-4 rounded-5">
+                    <div class="fs-20 lh-1_65 py-4 description"><?= $section_5['description'] ?></div>
                     <a href="<?= $section_5['button']['url'] ?>" class="btn rounded-pill btn-primary d-inline-flex text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_5['button']['title'] ?></a>
                 </div>
             </div>

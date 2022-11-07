@@ -77,6 +77,11 @@ h6,
         box-shadow: none;
         outline: none;
     }
+
+    @include media-breakpoint-down(sm) {
+        height: 42px;
+        font-size: 0.875rem !important;
+    }
 }
 
 .shadow {

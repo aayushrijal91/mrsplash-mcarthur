@@ -21,6 +21,15 @@ jQuery(function ($) {
                     $('#homepage_services_slider').slick({
                         slidesToShow: 3,
                         slidesToScroll: 1,
+                        responsive: [
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 1,
+                                    arrows: false,
+                                }
+                            }
+                        ]
                     });
 
                     $('#services_slider').slick({
