@@ -42,6 +42,15 @@ jQuery(function ($) {
                         dots: true,
                         prevArrow: $("#services_prev"),
                         nextArrow: $("#services_next"),
+                        responsive: [
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    centerMode: false,
+                                    centerPadding: 0,
+                                }
+                            }
+                        ]
                     })
                 });
             }, // end misc

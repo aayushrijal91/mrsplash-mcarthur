@@ -446,6 +446,10 @@ header {
     section.services_slider {
         padding: 188px 0 158px;
 
+        @include media-breakpoint-down(sm) {
+            padding: 100px 0;
+        }
+
         .slick-track {
             display: flex;
         }
@@ -453,14 +457,23 @@ header {
         .slick-slide {
             height: inherit;
             margin: 0 31px;
+
+            @include media-breakpoint-down(sm) {
+                margin: 0 24px;
+            }
         }
 
         .slick-dots {
             display: flex !important;
             bottom: -44px;
-            left: 13%;
+            left: 8%;
             list-style-type: none;
-            justify-content: center;
+            justify-content: start;
+
+            @include media-breakpoint-up(md) {
+                justify-content: center;
+                left: 13%;
+            }
 
             @include media-breakpoint-up(lg) {
                 justify-content: start;
@@ -509,6 +522,16 @@ header {
                 height: 100%;
                 min-height: 344px;
                 text-transform: capitalize;
+
+                @include media-breakpoint-down(sm) {
+                    background: $primary;
+                    padding: 32px 16px;
+                    min-height: auto;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                background: none !important;
             }
         }
     }
