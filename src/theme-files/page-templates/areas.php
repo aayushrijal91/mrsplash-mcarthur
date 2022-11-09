@@ -23,7 +23,7 @@ $the_query = new WP_Query($args);
 
 <div class="areas_page">
     <div class="container">
-        <section class="section_1 mt-n6 position-relative">
+        <section class="section_1 mt-n4 mt-md-n6 position-relative">
             <div class="hero_heading fs-72 lh-1 fw-800">Servicing <span>Campbelltown & Macarthur</span></div>
         </section>
 
@@ -39,7 +39,7 @@ $the_query = new WP_Query($args);
                                 <svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.56322 0.050041C5.54448 0.264591 3.45854 1.36626 2.13086 2.91913C0.352906 4.99862 -0.369376 7.78175 0.180513 10.4345C0.401921 11.5026 0.957582 12.8104 1.53773 13.6286C1.89305 14.1299 8.43962 22 8.50118 22C8.56275 22 15.1093 14.1299 15.4646 13.6286C15.8273 13.1172 16.3733 12.0066 16.5772 11.3656C17.3878 8.81848 17.0216 6.07622 15.5754 3.8626C14.5185 2.2448 12.983 1.05551 11.1518 0.43631C10.0005 0.0469536 8.80379 -0.0818355 7.56322 0.050041ZM9.4911 4.9504C10.8573 5.37979 11.7875 6.50919 11.9635 7.95209C12.1508 9.48747 11.3244 10.9655 9.91439 11.6168C9.46763 11.8233 9.07296 11.9032 8.50118 11.9032C7.92941 11.9032 7.53474 11.8233 7.08798 11.6168C5.41869 10.8457 4.6081 8.93497 5.20806 7.18543C5.62644 5.96532 6.69918 5.04694 7.94259 4.8443C8.33913 4.77971 9.11769 4.83303 9.4911 4.9504Z" fill="#CF4275" />
                                 </svg>
-                                <span class="ps-2"><?= get_the_title() ?></span>
+                                <div class="ps-2"><?= get_the_title() ?></div>
                             </a>
                         </div>
                     <?php endwhile; ?>
@@ -47,8 +47,8 @@ $the_query = new WP_Query($args);
             <?php endif; ?>
         </section>
         <section class="section_3">
-            <div class="row align-items-center justify-content-center">
-                <div class="col">
+            <div class="row align-items-center justify-content-md-center gy-4">
+                <div class="col-md">
                     <div class="text-primary-light fs-48 fw-800 lh-1">Can't find your area?</div>
                     <div class="fs-20">View our other branches or contact us for further help</div>
                 </div>

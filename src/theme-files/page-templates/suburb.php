@@ -11,13 +11,13 @@ get_template_part('parts/section', 'banner');
 <div class="suburb_page">
     <div class="container">
         <section class="section_1">
-            <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-between align-items-center gy-5">
                 <div class="col-lg-6">
                     <img src="<?= get_field('suburb', 'options')['hero_image']['url'] ?>" class="rounded-20 w-100 h-100" alt="<?= get_field('suburb', 'options')['hero_image']['url'] ?>">
                 </div>
                 <div class="col-lg-5">
                     <div class="hero_heading fs-72 fw-700 lh-1">Proudly Servicing <span><?= get_the_title(); ?></span></div>
-                    <div class="fs-20 lh-1_65 py-4 text-light-grey">
+                    <div class="fs-20 lh-1_65 py-4 text-light-grey description">
                         <?= get_field('suburb', 'options')['hero_description'] ?>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ get_template_part('parts/section', 'banner');
 
         <section class="suburb_card">
             <div class="hero_heading fs-72 fw-700 lh-1">Our <span><?= get_the_title(); ?> Services</span> in Plumbing</div>
-            <div class="fs-20 lh-1_65 pt-4 pb-7 text-light-grey">
+            <div class="fs-20 lh-1_65 pt-4 pb-5 pb-md-7 text-light-grey description">
                 <?= get_field('suburb', 'options')['service_hero_description'] ?>
             </div>
             <?php
@@ -49,7 +49,8 @@ get_template_part('parts/section', 'banner');
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="fs-36 fw-700 lh-1 text-capitalize"><?= $title ?></div>
-                                        <div class="fs-20 lh-1_25 pt-4"><?= $description ?></div>
+                                        <div class="fs-20 lh-1_25 pt-4 description"><?= $description ?></div>
+                                        <img src="<?= $bg_image['url'] ?>" alt="<?= $bg_image['alt'] ?>" class="rounded-20 mt-5 d-md-none">
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +73,7 @@ get_template_part('parts/section', 'banner');
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-5">
                 <div class="hero_heading fs-72 fw-700 lh-1"><?= get_field('suburb', 'options')['contact_title'] ?></div>
-                <div class="fs-20 lh-1_65 py-4 text-light-grey">
+                <div class="fs-20 lh-1_65 py-4 text-light-grey description">
                     <?= get_field('suburb', 'options')['contact_description'] ?>
                 </div>
             </div>
