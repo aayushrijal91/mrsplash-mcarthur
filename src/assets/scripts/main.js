@@ -14,6 +14,7 @@ jQuery(function ($) {
                         arrows: true,
                         dots: true,
                         slidesToScroll: 1,
+                        autoplay: true,
                         prevArrow: $("#homepage_deal_prev"),
                         nextArrow: $("#homepage_deal_next"),
                     });
@@ -21,12 +22,25 @@ jQuery(function ($) {
                     $('#homepage_services_slider').slick({
                         slidesToShow: 3,
                         slidesToScroll: 1,
+                        autoplay: true,
                         responsive: [
+                            {
+                                breakpoint: 1560,
+                                settings: {
+                                    slidesToShow: 2,
+                                    arrows: false,
+                                }
+                            },
+                            {
+                                breakpoint: 900,
+                                settings: {
+                                    slidesToShow: 2,
+                                }
+                            },
                             {
                                 breakpoint: 540,
                                 settings: {
                                     slidesToShow: 1,
-                                    arrows: false,
                                 }
                             }
                         ]

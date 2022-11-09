@@ -113,8 +113,12 @@ header {
             }
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(xl) {
+            padding: 150px 0 0;
             background: radial-gradient(73.65% 190.43% at 85.49% 50%, #19252D 0%, #09141C 100%);
+        }
+
+        @include media-breakpoint-down(lg) {
             padding: 104px 0 0;
 
             .homepage_cta {
@@ -167,6 +171,10 @@ header {
             flex-direction: column;
             justify-content: space-between;
 
+            @include media-breakpoint-down(xl) {
+                padding: 48px 24px;
+            }
+
             @include media-breakpoint-down(sm) {
                 padding: 24px;
             }
@@ -178,7 +186,7 @@ header {
                     list-style-type: none;
                     justify-content: center;
 
-                    @include media-breakpoint-up(lg) {
+                    @include media-breakpoint-up(md) {
                         justify-content: start;
                     }
 
@@ -229,8 +237,16 @@ header {
             padding: 16px;
 
             @include media-breakpoint-up(md) {
-                margin-top: -103px;
+                margin-top: 24px;
+                padding: 24px;
+            }
+
+            @include media-breakpoint-up(lg) {
                 padding: 79px 60px 60px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin-top: -103px;
             }
 
             .social_card {
@@ -294,10 +310,20 @@ header {
         background-size: contain;
         background-repeat: no-repeat;
 
-        @include media-breakpoint-down(sm) {
-            padding: 64px 0;
-            background-image: none !important;
+        @include media-breakpoint-down(xxl) {
+            padding: 80px 0;
+            background-size: cover;
+        }
 
+        @include media-breakpoint-down(xl) {
+            background-image: none !important;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 64px 0;
+        }
+
+        @include media-breakpoint-down(sm) {
             .description {
                 font-size: 1rem !important;
             }
@@ -371,9 +397,21 @@ header {
         background-size: contain;
         background-repeat: no-repeat;
 
+        @include media-breakpoint-down(xxl) {
+            padding: 80px 0;
+            background-size: cover;
+        }
+
+        @include media-breakpoint-down(xl) {
+            background-image: none !important;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 64px 0;
+        }
+
         @include media-breakpoint-down(sm) {
             padding: 64px 0;
-            background-image: none !important;
 
             .description {
                 font-size: 1rem !important;
@@ -608,6 +646,10 @@ header {
 .contact_us_page {
     padding: 188px 0;
 
+    @include media-breakpoint-down(sm) {
+        padding: 100px 0;
+    }
+
     .contact_card {
         border-radius: 20px;
         filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
@@ -620,19 +662,32 @@ header {
         align-items: center;
         justify-content: space-between;
 
+        @include media-breakpoint-down(sm) {
+            padding: 24px;
+        }
+
         .title {
-            font-size: 36px;
+            font-size: 2.25rem;
             text-transform: capitalize;
             color: $secondary;
             font-weight: 800;
             line-height: 1;
             padding-top: 40px;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.5rem;
+            }
         }
 
         .contact {
             font-size: 1.5rem;
             font-weight: 500;
             color: $light-grey;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1rem;
+                padding-top: 16px;
+            }
         }
     }
 }
@@ -926,7 +981,7 @@ footer {
         border-radius: 20px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
             padding: 24px;
         }
     }
@@ -1007,6 +1062,12 @@ footer {
         padding: 60px;
         color: $white;
         filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include media-breakpoint-down(sm) {
+            padding: 32px 16px;
+        }
 
         form {
             .input-group {

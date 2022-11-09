@@ -2,7 +2,7 @@
 
 <div class="contactUsForm">
     <div class="container">
-        <div class="row">
+        <div class="row gy-4">
             <div class="col-lg-6">
                 <div class="contactUsForm_card h-100 rounded-20 d-flex flex-column justify-content-between align-items-center lazyload" data-src="<?= $part_contactUs['background_image']['url'] ?>">
                     <div class="w-100">
@@ -15,7 +15,7 @@
             <div class="col-lg-6">
                 <div class="contactUsForm_card h-100 rounded-20 bg-primary-light">
                     <div class="fs-18"><?= $part_contactUs['enquiry_sub_title'] ?></div>
-                    <div class="fs-72 lh-1 fw-800 pt-4 pb-6"><?= $part_contactUs['enquiry_hero_title'] ?></div>
+                    <div class="fs-72 lh-1 fw-800 pt-4 pb-5 pb-md-6"><?= $part_contactUs['enquiry_hero_title'] ?></div>
                     <?= do_shortcode('[contact-form-7 id="299" title="Contact Us"]') ?>
                     <!-- <form action="">
                         <div class="fs-18">Get A Free Quote</div>

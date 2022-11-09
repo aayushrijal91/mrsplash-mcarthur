@@ -19,11 +19,11 @@
                             <div class="col-12">
                                 <div class="quick_contact bg-<?= $bg_color[$index] ?>">
                                     <div class="row justify-content-between align-items-center gy-5">
-                                        <div class="col-auto">
+                                        <div class="col-md col-lg-auto ">
                                             <div class="fs-18"><?= $sub_title ?></div>
                                             <div class="fs-48 lh-1 fw-800 pt-3"><?= $title ?></div>
                                         </div>
-                                        <div class="col-9 col-lg-3">
+                                        <div class="col-9 col-md-4 col-lg-3">
                                             <a href="<?= $button['url'] ?>" class="btn btn-secondary rounded-pill text-white fw-700 fs-18"><?= $button['title'] ?></a>
                                         </div>
                                     </div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="pt-7">
-            <div class="row align-items-center justify-content-center justify-content-md-between gy-4">
+            <div class="row align-items-center justify-content-center justify-content-xl-between gy-4">
                 <div class="col-auto">
                     <a href="./">
                         <img src="<?= $footer['logo']['url'] ?>" alt="<?= $footer['logo']['alt'] ?>">
@@ -50,13 +50,13 @@
                     while (have_rows('footer', 'options')) : the_row();
                 ?>
                         <div class="col-md-auto">
-                            <div class="row align-items-center justify-content-center gy-3 gx-xxl-5">
+                            <div class="row align-items-center justify-content-center gy-3 gx-md-1 gx-lg-4 gx-xxl-5">
                                 <?php
                                 if (have_rows('reviews', 'options')) :
                                     while (have_rows('reviews', 'options')) : the_row();
                                         $img = get_sub_field('image');
                                 ?>
-                                        <div class="col-6 col-md-auto">
+                                        <div class="col-6 col-md col-lg-auto">
                                             <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>">
                                         </div>
                                 <?php
@@ -91,6 +91,7 @@
                         'container_class' => 'footer_menu',
                         'container_id' => '',
                     )); ?>
+                    <a href="" class="fs-20 fw-700">View All</a>
                 </div>
                 <div class="col-6 col-md-auto col-lg">
                     <div class="text-white fw-700 fs-24 pb-3">Areas We Service</div>
@@ -100,6 +101,7 @@
                         'container_class' => 'footer_menu',
                         'container_id' => '',
                     )); ?>
+                    <a href="" class="fs-20 fw-700">View All</a>
                 </div>
                 <div class="col-6 col-md-auto col-lg-2">
                     <div class="text-white fw-700 fs-24 pb-3">Support</div>

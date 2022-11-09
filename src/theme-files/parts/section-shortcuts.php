@@ -1,6 +1,6 @@
 <div class="section_shortcuts">
     <div class="container">
-        <div class="row justify-content-center g-4">
+        <div class="row justify-content-center g-md-2 g-xl-4">
             <?php
             if (have_rows('shortcuts', 'options')) :
                 while (have_rows('shortcuts', 'options')) : the_row();

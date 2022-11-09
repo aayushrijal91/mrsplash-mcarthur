@@ -18,7 +18,7 @@ get_template_part('parts/section', 'banner_home');
         <div class="container">
             <div class="row g-4">
                 <div class="col-12"></div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="deals_card h-100 bg-white rounded-20 shadow">
                         <div id="homepage_deal_1_slider">
                             <?php if (have_rows('section_1')) :
@@ -62,7 +62,7 @@ get_template_part('parts/section', 'banner_home');
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="deals_card h-100 bg-primary rounded-20 shadow">
                         <div class="pb-5">
                             <div class="fs-64 text-white fw-700 lh-1"><?= $section_1_2['title'] ?></div>
@@ -78,11 +78,11 @@ get_template_part('parts/section', 'banner_home');
     <section class="section_2">
         <?php $section_2 = get_field('section_2'); ?>
         <div class="container">
-            <div class="row align-items-center gx-lg-0">
-                <div class="col-lg-auto">
+            <div class="row justify-content-center align-items-center gx-lg-0">
+                <div class="col-xl-auto">
                     <img src="<?= get_template_directory_uri() ?>/images/lib/family-in-laptop.png" alt="">
                 </div>
-                <div class="col-lg">
+                <div class="col-lg text-center text-xl-start">
                     <div class="text-grey fs-72 fw-700 lh-1 hero_heading"><?= $section_2['hero_heading'] ?></span></div>
                     <div class="fs-20 text-light-grey pt-4 description"><?= $section_2['description'] ?></div>
                 </div>
@@ -99,7 +99,7 @@ get_template_part('parts/section', 'banner_home');
                                     $button = get_sub_field('button');
                                     $class = strtolower(get_sub_field('class'));
                     ?>
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-md-6 col-xl-3">
                                         <div class="social_card lazyload" data-src="<?= $bg['url'] ?>">
                                             <a href="<?= $button['url'] ?>" class="social_button <?= $class ?>">
                                                 <div class="row align-items-center">
@@ -124,15 +124,15 @@ get_template_part('parts/section', 'banner_home');
     <section class="section_3 lazyload" data-src="<?= $section_3['background']['url'] ?>">
         <div class="container">
             <div class="row gx-xl-8">
-                <div class="col-lg-6">
+                <div class="col-xl-6">
                     <div class="fs-72 fw-700 lh-1"><?= $section_3['heading'] ?></div>
-                    <img src="<?= $section_3['background']['url'] ?>" alt="<?= $section_3['background']['url'] ?>" class="d-md-none py-4">
+                    <img src="<?= $section_3['background']['url'] ?>" alt="<?= $section_3['background']['url'] ?>" class="d-xl-none py-4">
                     <div class="fs-20 lh-1_65 py-3 py-md-4 description"><?= $section_3['description'] ?></div>
                     <div class="row pt-md-4">
-                        <div class="col-6 col-lg-5">
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-5">
                             <a href="<?= $section_3['button_1']['url'] ?>" class="btn rounded-pill btn-primary-light text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_3['button_1']['title'] ?></a>
                         </div>
-                        <div class="col-6 col-lg-5">
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-5">
                             <a href="<?= $section_3['button_2']['url'] ?>" class="btn w-100 rounded-pill border-2 border-white  text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_3['button_2']['title'] ?></a>
                         </div>
                     </div>
@@ -144,12 +144,12 @@ get_template_part('parts/section', 'banner_home');
     <section class="section_4">
         <?php $section_4 = get_field('section_4'); ?>
         <div class="container">
-            <div class="row align-items-center justify-content-between gy-5">
-                <div class="col-lg-5">
+            <div class="row align-items-center justify-content-center justify-content-xl-between gy-5 gx-xl-5 gx-xxl-4">
+                <div class="col-md-8 col-xl-5">
                     <img src="<?= $section_4['hero_image']['url'] ?>" class="rounded-20 w-100 h-100" alt="<?= $section_4['hero_image']['alt'] ?>">
                 </div>
-                <div class="col-lg col-xl-6">
-                    <div class="hero_heading fs-72 fw-800 lh-1"><?= $section_4['heading'] ?></div>
+                <div class="col-xl-7 col-xxl-6">
+                    <div class="hero_heading fs-72 fw-800 lh-1 text-center text-xl-start"><?= $section_4['heading'] ?></div>
                     <div class="services_slider" id="homepage_services_slider">
                         <?php if (have_rows('section_4')) :
                             while (have_rows('section_4')) : the_row();
@@ -169,7 +169,7 @@ get_template_part('parts/section', 'banner_home');
                         endif;
                         ?>
                     </div>
-                    <a href="<?= $section_4['button']['url'] ?>" class="btn rounded-pill d-inline-flex btn-primary-light text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_4['button']['title'] ?></a>
+                    <div class="text-center text-xl-start"><a href="<?= $section_4['button']['url'] ?>" class="btn rounded-pill d-inline-flex btn-primary-light text-white fs-18 fw-700 px-5"><?= $section_4['button']['title'] ?></a></div>
                 </div>
             </div>
         </div>
@@ -179,9 +179,9 @@ get_template_part('parts/section', 'banner_home');
     <section class="section_5 lazyload" data-src="<?= $section_5['background']['url'] ?>">
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-lg-5">
+                <div class="col-xl-5">
                     <div class="fs-72 fw-700 lh-1"><?= $section_5['heading'] ?></div>
-                    <img src="<?= $section_5['background']['url'] ?>" alt="<?= $section_5['background']['url'] ?>" class="d-md-none my-4 rounded-5">
+                    <img src="<?= $section_5['background']['url'] ?>" alt="<?= $section_5['background']['url'] ?>" class="d-xl-none my-4 rounded-5">
                     <div class="fs-20 lh-1_65 py-4 description"><?= $section_5['description'] ?></div>
                     <a href="<?= $section_5['button']['url'] ?>" class="btn rounded-pill btn-primary d-inline-flex text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_5['button']['title'] ?></a>
                 </div>

@@ -1,12 +1,8 @@
-# Wordpress Dev theme
+# MrSplash Macarthur[https://www.mrsplashmacarthur.com.au]
 
 ## _Author Information_
 
-https://www.aiims.com.au/
-
-Developer: Aayush Rijal
-
-Email: arijal@aiims.com.au, aayush.rijal99@gmail.com
+Developer: https://www.aayushrijal.net
 
 Contact: 0452637371
 

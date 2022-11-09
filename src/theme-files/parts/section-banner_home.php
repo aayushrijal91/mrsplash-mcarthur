@@ -5,7 +5,7 @@ $homepage_banner = get_field('homepage_banner'); ?>
 <header class="homepage_header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-xl-6">
                 <h1 class="hero_heading fs-72 lh-1 fw-700"><?= $banner['heading'] ?></h1>
                 <div class="sub_heading fs-30 lh-1"><?= $homepage_banner['sub_heading'] ?></div>
                 <?php if (have_rows('homepage_banner')) :
@@ -32,5 +32,5 @@ $homepage_banner = get_field('homepage_banner'); ?>
             </div>
         </div>
     </div>
-    <img src="<?= get_template_directory_uri() ?>/images/background/homepage-banner.png" alt="homepage" class="pt-5 d-md-none w-100">
+    <img src="<?= get_template_directory_uri() ?>/images/background/homepage-banner.png" alt="homepage" class="pt-5 d-xl-none w-100">
 </header>
