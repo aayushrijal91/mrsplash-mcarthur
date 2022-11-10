@@ -25,7 +25,7 @@ get_template_part('parts/section', 'banner');
                     $featured_description = get_field('featured_description');
                     $featured_description = isset($featured_description) ? substr(get_field('featured_description'),0, 89) . '...' : '...';
             ?>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-xl-4">
                         <a href="<?= get_the_permalink() ?>" class="w-100 h-100">
                             <div class="blog_card rounded-20 w-100 h-100">
                                 <div class="background lazyload" data-src="<?= $featured_img_url ?>"></div>
