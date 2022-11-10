@@ -113,6 +113,10 @@ header {
             }
         }
 
+        @include media-breakpoint-only(xl) {
+            padding: 80px 0;
+        }
+
         @include media-breakpoint-down(xl) {
             padding: 150px 0 0;
             background: radial-gradient(73.65% 190.43% at 85.49% 50%, #19252D 0%, #09141C 100%);
@@ -140,9 +144,14 @@ header {
             color: $secondary;
         }
 
+        @include media-breakpoint-down(lg) {
+            background-size: cover !important;
+            padding: 80px 0;
+            min-height: auto;
+        }
+
         @include media-breakpoint-down(sm) {
             background: radial-gradient(73.65% 190.43% at 85.49% 50%, #19252D 0%, #09141C 100%) !important;
-            min-height: auto;
             padding: 64px 0;
         }
 
@@ -151,7 +160,11 @@ header {
             right: 13%;
             bottom: 0;
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(xl) {
+                right: 5%;
+            }
+
+            @include media-breakpoint-down(lg) {
                 display: none;
             }
         }
@@ -446,13 +459,13 @@ header {
         background-position: right center;
         padding: 80px 16px;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-only(lg) {
+            padding: 48px 16px;
+        }
+
+        @include media-breakpoint-down(lg) {
             padding: 0;
             background-image: none !important;
-
-            .description {
-                font-size: 1rem !important;
-            }
         }
     }
 
@@ -469,6 +482,14 @@ header {
             background: $white;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
+
+            @include media-breakpoint-down(xl) {
+                padding: 32px 24px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                padding: 24px;
+            }
 
             @include media-breakpoint-down(sm) {
                 padding: 36px 24px 24px;
@@ -515,6 +536,15 @@ header {
 
             @include media-breakpoint-up(lg) {
                 justify-content: start;
+                left: 3%;
+            }
+
+            @include media-breakpoint-up(xl) {
+                left: 6%;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                left: 8%;
             }
 
             li {
@@ -561,11 +591,26 @@ header {
                 min-height: 344px;
                 text-transform: capitalize;
 
+                .hero_heading {
+                    @include media-breakpoint-only(md) {
+                        font-size: 48px !important;
+                    }
+                }
+
+                @include media-breakpoint-down(lg) {
+                    min-height: auto;
+                    padding: 48px 16px;
+                }
+
                 @include media-breakpoint-down(sm) {
                     background: $primary;
                     padding: 32px 16px;
                     min-height: auto;
                 }
+            }
+
+            @include media-breakpoint-down(xl) {
+                background-size: cover;
             }
 
             @include media-breakpoint-down(sm) {

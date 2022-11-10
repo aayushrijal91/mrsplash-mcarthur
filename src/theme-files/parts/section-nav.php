@@ -43,7 +43,7 @@
     </div>
     <div class="navigation">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-xl navbar-light mx-md-5">
+            <nav class="navbar navbar-expand-xl navbar-light  mx-xxl-5">
                 <a href="javascript:void(0)" class="pe-4" id="triggerSlideNav">
                     <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.89543 0.89543 0 2 0H30C31.1046 0 32 0.89543 32 2C32 3.10457 31.1046 4 30 4H2C0.89543 4 0 3.10457 0 2Z" fill="#1F2527" />

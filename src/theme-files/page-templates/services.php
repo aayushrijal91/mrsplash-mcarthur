@@ -32,8 +32,8 @@ get_template_part('parts/section', 'banner');
                     <div class="service_slider_card" style="background-image:url(<?= $cover_img ?>);">
                         <div class="service_slider_card_inner">
                             <div class="row align-items-center h-100">
-                                <div class="col-lg-5">
-                                    <div class="fs-72 fw-700 lh-1 pb-4"><?= $title ?></div>
+                                <div class="col-md-7 col-lg-5">
+                                    <div class="fs-72 fw-700 lh-1 pb-4 hero_heading"><?= $title ?></div>
                                     <a href="<?= $link ?>" class="btn rounded-pill btn-primary-light d-inline-flex text-white fs-18 fw-700 px-4 px-md-5 px-xl-8">Enquire</a>
                                 </div>
                             </div>

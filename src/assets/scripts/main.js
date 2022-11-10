@@ -58,7 +58,13 @@ jQuery(function ($) {
                         nextArrow: $("#services_next"),
                         responsive: [
                             {
-                                breakpoint: 540,
+                                breakpoint: 1560,
+                                settings: {
+                                    centerPadding: "60px",
+                                }
+                            },
+                            {
+                                breakpoint: 1100,
                                 settings: {
                                     centerMode: false,
                                     centerPadding: 0,
