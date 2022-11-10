@@ -50,6 +50,13 @@
                 justify-content: center;
                 align-items: center;
                 min-width: 196px;
+
+                &.phone_btn {
+                    @include media-breakpoint-down(xxl) {
+                        min-width: auto;
+                        padding: 8px 24px !important;
+                    }
+                }
             }
         }
 
@@ -159,7 +166,7 @@ header {
             position: absolute;
             right: 13%;
             bottom: 0;
-            
+
             @include media-breakpoint-down(xxl) {
                 right: 8%;
             }
@@ -681,7 +688,7 @@ header {
         background-repeat: no-repeat;
         background-position: right center;
         padding: 104px 16px;
-        
+
         @include media-breakpoint-down(xl) {
             padding: 48px 16px;
         }
@@ -753,6 +760,7 @@ header {
 
 // Start of Areas Page
 .areas_page {
+
     section.section_1,
     section.section_3 {
         border-radius: 20px;
@@ -917,8 +925,18 @@ header {
 
 // Start of Single Post
 .single_post_page {
+    @include media-breakpoint-down(sm) {
+        .description {
+            font-size: 1rem !important;
+        }
+    }
+
     section.intro {
         padding: 188px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 100px 0;
+        }
     }
 
     section.post_card {
@@ -926,6 +944,10 @@ header {
         padding: 80px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 48px 24px;
+        }
 
         .service {
             background-position: right center;
@@ -937,22 +959,34 @@ header {
             display: flex;
             align-items: center;
             overflow: hidden;
+
+            @include media-breakpoint-down(sm) {
+                padding: 32px 16px;
+                background-image: none !important;
+            }
         }
 
         &.further_assistance {
             margin: 188px 0;
+            
+            @include media-breakpoint-down(sm) {
+                margin: 100px 0;
+            }
 
             .description {
                 color: $light-grey;
                 margin-top: 60px;
 
+                @include media-breakpoint-down(sm) {
+                    margin-top: 32px;
+                }
+
                 ul {
-                    columns: 3;
                     list-style-type: disc;
                     margin-bottom: 0;
 
                     li {
-                        padding: 10px 0;
+                        padding: 6px 0;
                         position: relative;
 
                         &::before {
@@ -960,6 +994,14 @@ header {
                             position: absolute;
                             left: -1rem;
                         }
+
+                        @include media-breakpoint-up(md) {
+                            padding: 10px 0;
+                        }
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        columns: 3;
                     }
                 }
             }
@@ -1134,6 +1176,7 @@ footer {
                 font-size: 42px !important;
             }
         }
+
         @include media-breakpoint-down(sm) {
             padding: 32px 16px;
         }
