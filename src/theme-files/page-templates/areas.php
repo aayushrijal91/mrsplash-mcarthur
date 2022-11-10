@@ -6,29 +6,40 @@
  */
 get_header();
 get_template_part('parts/section', 'banner');
-$args = array(
-    'post_type'      => 'page',
-    'posts_per_page' => -1,
-    'order'          => 'ASC',
-    'orderby'        => 'title',
-    'meta_query' => array(
-        array(
-            'key' => '_wp_page_template',
-            'value' => 'page-templates/suburb.php'
-        )
-    )
-);
-$the_query = new WP_Query($args);
+
+$hero_heading = get_field('hero_heading');
+$hero_description = get_field('hero_description');
+$areas_heading = get_field('areas_heading');
+$areas_description = get_field('areas_description');
+$areas_button = get_field('areas_button');
 ?>
 
 <div class="areas_page">
     <div class="container">
         <section class="section_1 mt-n4 mt-md-n6 position-relative">
-            <div class="hero_heading fs-72 lh-1 fw-800">Servicing <span>Campbelltown & Macarthur</span></div>
+            <div class="hero_heading fs-72 lh-1 fw-800"><?= $hero_heading ?></div>
+            <div class="fs-20 lh-1_65 pt-4 text-light-grey description">
+                <?= $hero_description ?>
+            </div>
         </section>
 
         <section class="section_2">
             <?php  // The Loop
+            $args = array(
+                'post_type'      => 'page',
+                'posts_per_page' => -1,
+                'order'          => 'ASC',
+                'orderby'        => 'title',
+                'meta_query' => array(
+                    array(
+                        'key' => '_wp_page_template',
+                        'value' => 'page-templates/suburb.php'
+                    )
+                )
+            );
+            
+            $the_query = new WP_Query($args);
+
             if ($the_query->have_posts()) :
                 $count = 0;
             ?>
@@ -49,11 +60,11 @@ $the_query = new WP_Query($args);
         <section class="section_3">
             <div class="row align-items-center justify-content-md-center gy-4">
                 <div class="col-md">
-                    <div class="text-primary-light fs-48 fw-800 lh-1">Can't find your area?</div>
-                    <div class="fs-20">View our other branches or contact us for further help</div>
+                    <div class="text-primary-light fs-48 fw-800 lh-1"><?= $areas_heading ?></div>
+                    <div class="fs-20"><?= $areas_description ?></div>
                 </div>
                 <div class="col-auto">
-                    <a href="" class="btn btn-secondary rounded-pill fs-18 fw-700 text-white px-4 px-md-5 px-xl-7">Contact Us</a>
+                    <a href="<?= $areas_button['url'] ?>" class="btn btn-secondary rounded-pill fs-18 fw-700 text-white px-4 px-md-5 px-xl-7"><?= $areas_button['title'] ?></a>
                 </div>
             </div>
             <?php if (have_rows('microsites', 'options')) : ?>

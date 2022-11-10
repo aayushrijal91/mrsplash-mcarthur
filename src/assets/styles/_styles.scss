@@ -159,6 +159,10 @@ header {
             position: absolute;
             right: 13%;
             bottom: 0;
+            
+            @include media-breakpoint-down(xxl) {
+                right: 8%;
+            }
 
             @include media-breakpoint-down(xl) {
                 right: 5%;
@@ -677,9 +681,17 @@ header {
         background-repeat: no-repeat;
         background-position: right center;
         padding: 104px 16px;
+        
+        @include media-breakpoint-down(xl) {
+            padding: 48px 16px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            background-image: none !important;
+            padding: 48px 16px;
+        }
 
         @include media-breakpoint-down(sm) {
-            background-image: none !important;
             padding: 32px 16px;
         }
     }
@@ -741,13 +753,16 @@ header {
 
 // Start of Areas Page
 .areas_page {
-
     section.section_1,
     section.section_3 {
         border-radius: 20px;
         background: $white;
         padding: 60px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+        @include media-breakpoint-down(lg) {
+            padding: 48px;
+        }
 
         @include media-breakpoint-down(sm) {
             padding: 48px 24px;
@@ -1110,6 +1125,15 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
 
+        @include media-breakpoint-down(xl) {
+            padding: 48px 16px;
+        }
+
+        .hero_heading {
+            @include media-breakpoint-between(md, lg) {
+                font-size: 42px !important;
+            }
+        }
         @include media-breakpoint-down(sm) {
             padding: 32px 16px;
         }
