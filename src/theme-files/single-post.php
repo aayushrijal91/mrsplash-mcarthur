@@ -11,7 +11,7 @@ get_template_part('parts/section', 'banner');
                 <div class="col-lg-6">
                     <img src="<?= $intro['image']['url'] ?>" class="rounded-20 w-100 h-100" alt="<?= $intro['image']['alt'] ?>">
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg col-xl-5">
                     <div class="hero_heading fs-72 fw-700 lh-1"><?= $intro['title'] ?></div>
                     <div class="fs-20 lh-1_65 text-light-grey pt-4 description"><?= $intro['description'] ?></div>
                 </div>
@@ -44,10 +44,10 @@ get_template_part('parts/section', 'banner');
                 ?>
                                 <div class="service lazyload bg-<?= $bg_color ?> rounded-20<?= $index != 0 ? ' mt-4' : '' ?>" data-src="<?= $bg_image['url'] ?>">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-xl-6">
                                             <div class="fs-36 fw-700 lh-1 text-capitalize"><?= $title ?></div>
                                             <div class="fs-20 lh-1_25 pt-4 description"><?= $description ?></div>
-                                            <img src="<?= $bg_image['url'] ?>" alt="<?= $bg_image['alt'] ?>" class="rounded-20 mt-5 d-md-none">
+                                            <img src="<?= $bg_image['url'] ?>" alt="<?= $bg_image['alt'] ?>" class="rounded-20 mt-5 d-xl-none">
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@ get_template_part('parts/section', 'banner');
             </section>
 
             <div class="row justify-content-between align-items-center">
-                <div class="col-lg-5">
+                <div class="col-lg col-xl-5">
                     <div class="hero_heading fs-72 fw-700 lh-1"><?= $template_1['contact_heading'] ?></div>
                     <div class="contact_description fs-20 lh-1_65 py-4 text-light-grey description">
                         <?= $template_1['contact_description'] ?>
@@ -88,10 +88,11 @@ get_template_part('parts/section', 'banner');
                     <div class="row justify-content-center">
                         <div class="col-xl-11">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="fs-72 fw-700 lh-1 text-capitalize"><?= $section_1['title'] ?></div>
-                                    <div class="fs-20 lh-1_65 py-4"><?= $section_1['description'] ?></div>
-                                    <a href="<?= $section_1['button']['url'] ?>" class="btn rounded-pill btn-primary-light d-inline-flex text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_1['button']['title'] ?></a>
+                                <div class="col-xl-6">
+                                    <div class="fs-72 fw-700 lh-1 text-capitalize text-center text-xl-start"><?= $section_1['title'] ?></div>
+                                    <div class="text-center d-xl-none"><img src="<?= $section_1['background']['url'] ?>" alt="<?= $section_1['background']['alt'] ?>" class="rounded-20 mt-5"></div>
+                                    <div class="fs-20 lh-1_65 py-4 description text-center text-xl-start"><?= $section_1['description'] ?></div>
+                                    <div class="text-center text-xl-start"><a href="<?= $section_1['button']['url'] ?>" class="btn rounded-pill btn-primary-light d-inline-flex text-white fs-18 fw-700 px-4 px-xl-5"><?= $section_1['button']['title'] ?></a></div>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +102,7 @@ get_template_part('parts/section', 'banner');
                 <section class="section_2">
                     <?php $section_2 = $template_2['section_2']; ?>
                     <div class="hero_heading fs-72 fw-700 lh-1"><?= $section_2['title'] ?></div>
-                    <div class="fs-20 lh-1_65 pt-4 pb-7 text-light-grey">
+                    <div class="fs-20 lh-1_65 pt-4 pb-5 pb-md-6 pb-xl-7 text-light-grey description">
                         <?= $section_2['description'] ?>
                     </div>
                     <?php
@@ -111,7 +112,7 @@ get_template_part('parts/section', 'banner');
                                 while (have_rows('section_2')) : the_row();
                                     if (have_rows('benefits_list')) :
                     ?>
-                                        <div class="row g-4">
+                                        <div class="row g-3 g-md-4">
                                             <?php while (have_rows('benefits_list')) : the_row(); ?>
                                                 <div class="col-md-6 col-lg-4">
                                                     <div class="benefit_card">
@@ -131,10 +132,10 @@ get_template_part('parts/section', 'banner');
                 <section class="section_3">
                     <?php $section_3 = $template_2['section_3']; ?>
 
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-lg-5">
+                    <div class="row justify-content-between align-items-center gy-5">
+                        <div class="col-lg col-xl-5">
                             <div class="hero_heading fs-72 fw-800 lh-1"><?= $section_3['title'] ?></div>
-                            <div class="fs-20 lh-1_65 text-light-grey pt-4"><?= $section_3['description'] ?></div>
+                            <div class="fs-20 lh-1_65 text-light-grey pt-4 description"><?= $section_3['description'] ?></div>
                         </div>
                         <div class="col-lg-6">
                             <img src="<?= $section_3['image']['url'] ?>" class="rounded-20 w-100 h-100" alt="<?= $section_3['image']['alt'] ?>">
@@ -147,9 +148,9 @@ get_template_part('parts/section', 'banner');
                     <div class="row justify-content-center">
                         <div class="col-xl-11">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-xl-6">
                                     <div class="fs-72 fw-700 lh-1 text-capitalize"><?= $section_4['title'] ?></div>
-                                    <div class="fs-20 lh-1_65 pt-4"><?= $section_4['description'] ?></div>
+                                    <div class="fs-20 lh-1_65 pt-4 description"><?= $section_4['description'] ?></div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +160,7 @@ get_template_part('parts/section', 'banner');
                 <section class="post_card section_5">
                     <?php $section_5 = $template_2['section_5']; ?>
                     <div class="hero_heading fs-72 fw-700 lh-1"><?= $section_5['title'] ?></div>
-                    <div class="fs-20 lh-1_65 pt-4 pb-7 text-light-grey">
+                    <div class="fs-20 lh-1_65 pt-4 pb-5 pb-md-6 pb-xl-7 text-light-grey description">
                         <?= $section_5['description'] ?>
                     </div>
                     <?php
@@ -190,9 +191,9 @@ get_template_part('parts/section', 'banner');
                     <?php $section_6 = $template_2['section_6']; ?>
 
                     <div class="row justify-content-between align-items-center">
-                        <div class="col-lg-5">
+                        <div class="col-lg col-xl-5">
                             <div class="hero_heading fs-72 fw-700 lh-1"><?= $section_6['title'] ?></div>
-                            <div class="contact_description fs-20 lh-1_65 py-4 text-light-grey">
+                            <div class="contact_description fs-20 lh-1_65 py-4 text-light-grey description">
                                 <?= $section_6['description'] ?>
                             </div>
                         </div>

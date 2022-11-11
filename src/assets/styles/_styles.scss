@@ -820,6 +820,10 @@ header {
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
 
+        @include media-breakpoint-down(xl) {
+            padding: 48px 24px;
+        }
+
         @include media-breakpoint-down(sm) {
             padding: 32px 16px;
         }
@@ -835,9 +839,16 @@ header {
             align-items: center;
             overflow: hidden;
 
+            @include media-breakpoint-down(xl) {
+                background-image: none !important;
+            }
+
+            @include media-breakpoint-down(lg) {
+                padding: 48px 24px;
+            }
+
             @include media-breakpoint-down(sm) {
                 padding: 32px 16px;
-                background-image: none !important;
             }
         }
 
@@ -876,6 +887,10 @@ header {
                     }
 
                     @include media-breakpoint-up(md) {
+                        columns: 2;
+                    }
+
+                    @include media-breakpoint-up(lg) {
                         columns: 3;
                     }
                 }
@@ -945,8 +960,12 @@ header {
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(xl) {
             padding: 48px 24px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 32px 16px;
         }
 
         .service {
@@ -960,15 +979,22 @@ header {
             align-items: center;
             overflow: hidden;
 
+            @include media-breakpoint-down(xl) {
+                background-image: none !important;
+            }
+
+            @include media-breakpoint-down(lg) {
+                padding: 48px 24px;
+            }
+
             @include media-breakpoint-down(sm) {
                 padding: 32px 16px;
-                background-image: none !important;
             }
         }
 
         &.further_assistance {
             margin: 188px 0;
-            
+
             @include media-breakpoint-down(sm) {
                 margin: 100px 0;
             }
@@ -1001,6 +1027,10 @@ header {
                     }
 
                     @include media-breakpoint-up(md) {
+                        columns: 2;
+                    }
+
+                    @include media-breakpoint-up(lg) {
                         columns: 3;
                     }
                 }
@@ -1015,6 +1045,10 @@ header {
     .template_2 {
         section.section_1 {
             padding: 123px 16px;
+
+            @include media-breakpoint-down(lg) {
+                padding: 64px 16px;
+            }
         }
 
         section.section_1,
@@ -1024,6 +1058,10 @@ header {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: right center;
+
+            @include media-breakpoint-down(xl) {
+                background-image: none !important;
+            }
         }
 
         section.section_2 {
@@ -1032,6 +1070,15 @@ header {
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
             margin: 188px 0;
+
+            @include media-breakpoint-down(lg) {
+                padding: 64px 24px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin: 100px 0;
+                padding: 48px 16px;
+            }
 
             .benefit_card {
                 background-color: $light;
@@ -1045,12 +1092,29 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                @include media-breakpoint-down(xl) {
+                    padding: 48px 24px;
+                }
+        
+                @include media-breakpoint-down(sm) {
+                    padding: 32px 16px;
+                }
             }
         }
 
         section.section_4 {
             padding: 96px 16px 80px;
             margin: 188px 0;
+
+            @include media-breakpoint-down(lg) {
+                padding: 64px 24px;
+            }
+            
+            @include media-breakpoint-down(sm) {
+                margin: 100px 0;
+                padding: 48px 16px;
+            }
         }
 
         section.section_5 {
@@ -1065,6 +1129,22 @@ header {
                 font-size: 1.25rem;
                 display: flex;
                 justify-content: center;
+
+                @include media-breakpoint-down(xl) {
+                    padding: 48px 24px;
+                }
+        
+                @include media-breakpoint-down(sm) {
+                    padding: 32px 16px;
+                }
+            }
+        }
+
+        section.section_6 {
+            margin-top: 188px;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 100px;
             }
         }
     }

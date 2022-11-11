@@ -15,7 +15,7 @@ get_template_part('parts/section', 'banner');
                 <div class="col-lg-6">
                     <img src="<?= get_field('suburb', 'options')['hero_image']['url'] ?>" class="rounded-20 w-100 h-100" alt="<?= get_field('suburb', 'options')['hero_image']['url'] ?>">
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg col-xl-5">
                     <div class="hero_heading fs-72 fw-700 lh-1">Proudly Servicing <span><?= get_the_title(); ?></span></div>
                     <div class="fs-20 lh-1_65 py-4 text-light-grey description">
                         <?= get_field('suburb', 'options')['hero_description'] ?>
@@ -47,10 +47,10 @@ get_template_part('parts/section', 'banner');
             ?>
                             <div class="service lazyload bg-<?= $bg_color ?> rounded-20<?= $index != 0 ? ' mt-4' : '' ?>" data-src="<?= $bg_image['url'] ?>">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-xl-6">
                                         <div class="fs-36 fw-700 lh-1 text-capitalize"><?= $title ?></div>
                                         <div class="fs-20 lh-1_25 pt-4 description"><?= $description ?></div>
-                                        <img src="<?= $bg_image['url'] ?>" alt="<?= $bg_image['alt'] ?>" class="rounded-20 mt-5 d-md-none">
+                                        <img src="<?= $bg_image['url'] ?>" alt="<?= $bg_image['alt'] ?>" class="rounded-20 mt-5 d-xl-none w-100">
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@ get_template_part('parts/section', 'banner');
         </section>
 
         <div class="row justify-content-between align-items-center">
-            <div class="col-lg-5">
+            <div class="col-lg col-xl-5">
                 <div class="hero_heading fs-72 fw-700 lh-1"><?= get_field('suburb', 'options')['contact_title'] ?></div>
                 <div class="fs-20 lh-1_65 py-4 text-light-grey description">
                     <?= get_field('suburb', 'options')['contact_description'] ?>
