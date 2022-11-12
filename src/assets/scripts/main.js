@@ -71,7 +71,7 @@ jQuery(function ($) {
                                 }
                             }
                         ]
-                    })
+                    });
                 });
             }, // end misc
         }, // end ui
@@ -92,9 +92,90 @@ jQuery(window).scroll(function () {
         jQuery("#back-top").removeClass('active');
     }
 });
+
 jQuery('#back-top').click(function () {
     jQuery('body,html').animate({
         scrollTop: 0
     }, 1000);
     return false;
 });
+
+let formSlick = jQuery("#form_slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: false,
+    draggable: false,
+    dots: true,
+    responsive: [
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 1,
+                draggable: false,
+                touchMove: false,
+            }
+        }
+    ]
+});
+
+let currentTab = 0;
+showTab(currentTab);
+
+function showTab(n) {
+    formSlick.slick('slickGoTo', n);
+
+    let x = document.getElementsByClassName("tab");
+
+    if (n == 0) {
+        jQuery("#prevBtn").css('display', 'none');
+    } else if (n == (x.length)) {
+        jQuery('.buttons').removeClass('d-flex').addClass('d-none');
+    } else if (n == (x.length - 1)) {
+        jQuery("#nextBtn").html('Submit');
+    } else {
+        jQuery("#nextBtn").html('Next');
+        jQuery("#nextBtn").removeClass('btn-white').removeClass('text-primary').addClass('border-white').addClass('text-white');
+        jQuery("#prevBtn").css('display', 'inline');
+        jQuery('.form .title').removeClass('d-none').addClass('d-block');
+        jQuery('.buttons').removeClass('d-none').addClass('d-flex');
+    }
+}
+
+function nextPrev(n) {
+    var x = document.getElementsByClassName("tab");
+
+    if (n == 1 && !validateForm()) return false;
+    currentTab = currentTab + n;
+
+    if (currentTab >= x.length) {
+        document.getElementById("slider-form").submit();
+
+        return false;
+    }
+
+    showTab(currentTab);
+}
+
+function validateForm() {
+    var x, y, i, valid = true;
+
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByClassName('form-control required');
+
+    for (i = 0; i < y.length; i++) {
+        if (y[i].value == "") {
+            jQuery(y[i]).removeClass('invalid');
+            y[i].className += " invalid";
+            jQuery(y[i]).next('.invalid-feedback').remove();
+            jQuery(y[i]).after('<div class="invalid-feedback d-block">Please fill in this field.</div>');
+            valid = false;
+        }
+        else {
+            jQuery(y[i]).removeClass('invalid');
+            jQuery(y[i]).next('.invalid-feedback').remove();
+        }
+    }
+
+    return valid;
+}
