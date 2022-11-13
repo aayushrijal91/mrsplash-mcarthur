@@ -13,11 +13,28 @@
         color: $white;
         font-weight: 500;
         font-size: 1.25rem;
-        transform: translateX(100%);
+        transform: translateX(-100%);
         transition: 0.2s all ease-in-out;
 
         &.nav-open {
             transform: translateX(0);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 50px 24px;
+        }
+
+        .nav-btns {
+            .btn {
+                height: 60px;
+                border-radius: 100px;
+                font-weight: 700;
+            }
+        }
+
+        .nav-link {
+            font-size: 2rem;
+            font-weight: 700;
         }
     }
 
@@ -1192,6 +1209,10 @@ footer {
 
                     @include media-breakpoint-down(sm) {
                         font-size: 0.875rem;
+                    }
+
+                    &.view_all {
+                        color: $primary;
                     }
                 }
             }

@@ -8,6 +8,18 @@ jQuery(function ($) {
                     duration: 1500,
                 });
                 $(() => {
+                    $('#close-slidenav').on('click', function () {
+                        $('.slide-nav').removeClass('nav-open');
+                    });
+
+                    $('#triggerSlideNav').on('click', function () {
+                        $('.slide-nav').addClass('nav-open');
+                    });
+
+                    if ($('.navigation_wrapper .footer_menu ul li a').text() == 'View All') {
+                        $(this).addClass('view_all');
+                    }
+
                     $('#homepage_deal_1_slider').slick({
                         slidesToShow: 1,
                         slidesToScroll: 1,

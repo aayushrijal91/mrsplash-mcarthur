@@ -91,7 +91,6 @@
                         'container_class' => 'footer_menu',
                         'container_id' => '',
                     )); ?>
-                    <a href="" class="fs-20 fw-700">View All</a>
                 </div>
                 <div class="col-6 col-md-auto col-lg">
                     <div class="text-white fw-700 fs-24 pb-3">Areas We Service</div>
@@ -101,7 +100,6 @@
                         'container_class' => 'footer_menu',
                         'container_id' => '',
                     )); ?>
-                    <a href="" class="fs-20 fw-700">View All</a>
                 </div>
                 <div class="col-6 col-md-auto col-lg-2">
                     <div class="text-white fw-700 fs-24 pb-3">Support</div>

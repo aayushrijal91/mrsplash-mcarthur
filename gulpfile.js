@@ -33,7 +33,7 @@ var destinations = {
     images: `${build}images/`,
     styles: `${build}styles/`,
     scripts: `${build}scripts/`,
-    fonts: `${build}fonts/`,
+    fonts: `${build}/styles/fonts/`,
     data_files: `${build}files/`,
 }
 
