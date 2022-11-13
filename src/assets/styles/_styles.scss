@@ -189,228 +189,6 @@ header {
     section.section_1 {
         padding-top: 100px;
 
-        .form_wrapper {
-            padding: 40px;
-            color: $white;
-
-            @include media-breakpoint-down(sm) {
-                padding: 40px 20px;
-            }
-
-            #prevBtn {
-                cursor: pointer;
-            }
-
-            .form_slider {
-                .slick-track {
-                    display: flex !important;
-                }
-
-                .slick-slide {
-                    height: inherit !important;
-                }
-
-                .slick-dots {
-                    display: flex !important;
-                    bottom: -81px;
-                    list-style-type: none;
-                    justify-content: end;
-
-                    @include media-breakpoint-down(sm) {
-                        bottom: -76px;
-                    }
-
-                    li {
-                        margin: 0 4.5px;
-                        width: 13px;
-                        height: 13px;
-
-                        button:before {
-                            width: 13px;
-                            height: 13px;
-                        }
-
-                        @include media-breakpoint-down(sm) {
-                            width: 10px;
-                            height: 10px;
-                            margin: 0 2.5px;
-
-                            button:before {
-                                width: 10px;
-                                height: 10px;
-                            }
-                        }
-                    }
-
-                    button {
-                        display: block;
-                        width: 13px;
-                        height: 13px;
-                        padding: 0;
-                        border: none;
-                        text-indent: -9999px;
-                        border-radius: 50%;
-                        background-color: $light;
-                        opacity: 0.3;
-
-                        @include media-breakpoint-down(sm) {
-                            width: 10px;
-                            height: 10px;
-                        }
-                    }
-
-                    li.slick-active button {
-                        background-color: $secondary;
-                        opacity: 0.6;
-                    }
-                }
-
-                .tab {
-                    @include media-breakpoint-down(sm) {
-                        .hero_heading {
-                            font-size: 3rem !important;
-                        }
-
-                        .sub_heading {
-                            font-size: 1.125rem !important;
-                        }
-                    }
-
-                    input[type=text],
-                    input[type=email],
-                    input[type=tel],
-                    textarea {
-                        background: none;
-                        border-radius: 0;
-                        border: none;
-                        padding: 20px 0 0;
-                        font-size: 3rem;
-                        font-weight: 700;
-                        color: $white;
-                        line-height: 1;
-
-                        &::placeholder {
-                            color: rgba(255, 255, 255, 0.3);
-                        }
-
-                        &:focus {
-                            outline: none;
-                            box-shadow: none;
-                        }
-
-                        &:-webkit-autofill,
-                        &:-webkit-autofill:hover,
-                        &:-webkit-autofill:focus,
-                        &:-webkit-autofill:active {
-                            transition: background-color 5000s ease-in-out 0s;
-                            color: $white;
-                        }
-                    }
-
-                    textarea {
-                        height: auto !important;
-                    }
-
-                    input[type="radio"] {
-                        opacity: 0;
-                        position: fixed;
-                        width: 0;
-                    }
-
-                    .radio-toolbar label {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-between;
-                        cursor: pointer;
-                        color: $white;
-                        letter-spacing: -0.01em;
-                        height: 100%;
-                        width: 100%;
-                        background: rgba(255, 255, 255, 0.3);
-                        padding: 20px 24px;
-                        border-radius: 20px;
-                        text-align: center;
-                        font-weight: 700;
-                        transition: 0.2s all;
-                        font-size: 1.25rem;
-                        min-height: 144px;
-
-                        &:hover {
-                            background-color: $secondary;
-                        }
-
-                        &.time {
-                            height: 70px;
-                            min-height: 70px;
-                            border-radius: 100px;
-                            flex-direction: row;
-                            justify-content: center;
-                        }
-                    }
-
-                    .radio-toolbar input[type="radio"]:checked+label {
-                        background-color: $white;
-                        color: $dark;
-
-                        svg {
-                            filter: invert(44%) sepia(90%) saturate(2285%) hue-rotate(311deg) brightness(83%) contrast(94%);
-                        }
-                    }
-
-                    .form-check-input:checked+.form-check-label .radio-button-circle {
-                        background-color: $primary;
-                    }
-
-                    .range {
-                        width: 100%;
-                        height: 24px;
-                        position: relative;
-                        background-color: #F0F0F7;
-                        border-radius: 100px;
-
-                        .sliderThumb {
-                            position: absolute;
-                            width: 34px;
-                            height: 34px;
-                            background-color: $white;
-                            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-                            border-radius: 50%;
-                            top: -6px;
-                            cursor: pointer;
-                            z-index: 2;
-                        }
-
-                        .progressBar {
-                            position: absolute;
-                            height: 100%;
-                            background-color: $secondary;
-                            border-radius: 100px;
-                            z-index: 1;
-                        }
-
-                        input[type=range] {
-                            position: absolute;
-                            width: 99.5%;
-                            height: 24px;
-                            -webkit-appearance: none;
-                            opacity: 0;
-                            z-index: 3;
-
-                            &::-webkit-slider-thumb {
-                                height: 34px;
-                                width: 34px;
-                                background-color: $secondary;
-                                border-radius: 30px;
-                                cursor: pointer;
-                                -webkit-appearance: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         .deals_card {
             padding: 55px;
             display: flex;
@@ -1430,6 +1208,274 @@ footer {
 }
 
 // End of Footer
+
+// Start of Part Home Form
+.homeForm {
+    .form_wrapper {
+        padding: 60px;
+        color: $white;
+
+        @include media-breakpoint-down(lg) {
+            padding: 40px 24px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 40px 16px;
+        }
+
+        #prevBtn {
+            cursor: pointer;
+        }
+
+        .form_slider {
+            .slick-track {
+                display: flex !important;
+            }
+
+            .slick-slide {
+                height: inherit !important;
+            }
+
+            .slick-dots {
+                display: flex !important;
+                bottom: -81px;
+                list-style-type: none;
+                justify-content: end;
+
+                @include media-breakpoint-down(sm) {
+                    bottom: -76px;
+                }
+
+                li {
+                    margin: 0 4.5px;
+                    width: 13px;
+                    height: 13px;
+
+                    button:before {
+                        width: 13px;
+                        height: 13px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        width: 10px;
+                        height: 10px;
+                        margin: 0 2.5px;
+
+                        button:before {
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+
+                button {
+                    display: block;
+                    width: 13px;
+                    height: 13px;
+                    padding: 0;
+                    border: none;
+                    text-indent: -9999px;
+                    border-radius: 50%;
+                    background-color: $white;
+                    opacity: 0.3;
+
+                    @include media-breakpoint-down(sm) {
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+
+                li.slick-active button {
+                    background-color: $white;
+                    opacity: 1;
+                }
+            }
+
+            .tab {
+                @include media-breakpoint-down(sm) {
+                    .hero_heading {
+                        font-size: 3rem !important;
+                    }
+
+                    .sub_heading {
+                        font-size: 1.125rem !important;
+                    }
+                }
+
+                .label {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 1;
+                    text-transform: capitalize;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1rem;
+                    }
+                }
+
+                input[type=text],
+                input[type=email],
+                input[type=tel],
+                textarea {
+                    background: none;
+                    border-radius: 0;
+                    border: none;
+                    padding: 20px 0 0;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: $white;
+                    line-height: 1;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 2.25rem;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1.5rem;
+                    }
+
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.3);
+
+                    }
+
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+                    &:-webkit-autofill,
+                    &:-webkit-autofill:hover,
+                    &:-webkit-autofill:focus,
+                    &:-webkit-autofill:active {
+                        transition: background-color 5000s ease-in-out 0s;
+                        color: $white;
+                    }
+                }
+
+                textarea {
+                    height: auto !important;
+                }
+
+                input[type="radio"] {
+                    opacity: 0;
+                    position: fixed;
+                    width: 0;
+                }
+
+                .radio-toolbar label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    color: $white;
+                    letter-spacing: -0.01em;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(255, 255, 255, 0.3);
+                    padding: 20px 24px;
+                    border-radius: 20px;
+                    text-align: center;
+                    font-weight: 700;
+                    transition: 0.2s all;
+                    font-size: 1.25rem;
+                    min-height: 144px;
+
+                    &:hover {
+                        background-color: $secondary;
+                    }
+
+                    &.time {
+                        height: 70px;
+                        min-height: 70px;
+                        border-radius: 100px;
+                        flex-direction: row;
+                        justify-content: center;
+
+                        @include media-breakpoint-down(lg) {
+                            min-height: 50px;
+                            height: 50px;
+                        }
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 1rem;
+                        min-height: 100px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        padding: 16px;
+                        font-size: 0.875rem;
+                        min-height: 100px;
+                    }
+                }
+
+                .radio-toolbar input[type="radio"]:checked+label {
+                    background-color: $white;
+                    color: $dark;
+
+                    svg {
+                        filter: invert(44%) sepia(90%) saturate(2285%) hue-rotate(311deg) brightness(83%) contrast(94%);
+                    }
+                }
+
+                .form-check-input:checked+.form-check-label .radio-button-circle {
+                    background-color: $primary;
+                }
+
+                .range {
+                    width: 100%;
+                    height: 24px;
+                    position: relative;
+                    background-color: #F0F0F7;
+                    border-radius: 100px;
+
+                    .sliderThumb {
+                        position: absolute;
+                        width: 34px;
+                        height: 34px;
+                        background-color: $white;
+                        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+                        border-radius: 50%;
+                        top: -6px;
+                        cursor: pointer;
+                        z-index: 2;
+                    }
+
+                    .progressBar {
+                        position: absolute;
+                        height: 100%;
+                        background-color: $secondary;
+                        border-radius: 100px;
+                        z-index: 1;
+                    }
+
+                    input[type=range] {
+                        position: absolute;
+                        width: 99.5%;
+                        height: 24px;
+                        -webkit-appearance: none;
+                        opacity: 0;
+                        z-index: 3;
+
+                        &::-webkit-slider-thumb {
+                            height: 34px;
+                            width: 34px;
+                            background-color: $secondary;
+                            border-radius: 30px;
+                            cursor: pointer;
+                            -webkit-appearance: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End of Part Home Form
 
 // Start of Part Shortcuts
 .section_shortcuts {
