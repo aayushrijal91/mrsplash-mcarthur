@@ -16,9 +16,10 @@ jQuery(function ($) {
                         $('.slide-nav').addClass('nav-open');
                     });
 
-                    if ($('.navigation_wrapper .footer_menu ul li a').text() == 'View All') {
-                        $(this).addClass('view_all');
-                    }
+                    $(document).on("change", ".form_wrapper .wpcf7-list-item input[type='radio']", function () {
+                        $(".form_wrapper .wpcf7-list-item label").removeClass("checked");
+                        $(this).parent('label')[this.checked ? "addClass" : "removeClass"]("checked");
+                    });
 
                     $('#homepage_deal_1_slider').slick({
                         slidesToShow: 1,
@@ -110,6 +111,12 @@ jQuery('#back-top').click(function () {
         scrollTop: 0
     }, 1000);
     return false;
+});
+
+jQuery('#datetimepicker3').datetimepicker({
+    format: 'd.m.Y H:i',
+    inline: true,
+    lang: 'ru'
 });
 
 let formSlick = jQuery("#form_slider").slick({

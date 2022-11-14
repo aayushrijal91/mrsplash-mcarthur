@@ -18,7 +18,9 @@ get_template_part('parts/section', 'banner_home');
         <div class="container">
             <div class="row g-4">
                 <div class="col-12">
-                    <?php get_template_part('parts/section', 'homeForm'); ?>
+                    <div class="homeForm" id="homeForm">
+                        <?= do_shortcode('[contact-form-7 id="573" title="Homepage Form"]') ?>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="deals_card h-100 bg-white rounded-20 shadow">
