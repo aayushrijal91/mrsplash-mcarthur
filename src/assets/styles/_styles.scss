@@ -1580,7 +1580,9 @@ footer {
                             &:nth-child(10),
                             &:nth-child(11),
                             &:nth-child(12) {
-                                label::before, label.checked::before {
+
+                                label::before,
+                                label.checked::before {
                                     background-position-x: center;
                                     background-repeat: no-repeat;
                                 }
@@ -1625,114 +1627,42 @@ footer {
                             }
                         }
                     }
-                }
 
-                .radio-toolbar label {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-between;
-                    cursor: pointer;
-                    color: $white;
-                    letter-spacing: -0.01em;
-                    height: 100%;
-                    width: 100%;
-                    background: rgba(255, 255, 255, 0.3);
-                    padding: 20px 24px;
-                    border-radius: 20px;
-                    text-align: center;
-                    font-weight: 700;
-                    transition: 0.2s all;
-                    font-size: 1.25rem;
-                    min-height: 144px;
+                    .xdsoft_datetimepicker.xdsoft_inline {
+                        width: 100%;
+                        background: rgba(255, 255, 255, 0.3);
+                        padding: 30px;
+                        border-radius: 20px;
+                        border: 0;
 
-                    &:hover {
-                        background-color: $secondary;
-                    }
+                        .xdsoft_datepicker {
+                            margin: 0;
+                            width: 100%;
 
-                    &.time {
-                        height: 70px;
-                        min-height: 70px;
-                        border-radius: 100px;
-                        flex-direction: row;
-                        justify-content: center;
+                            .xdsoft_label {
+                                background: transparent;
+                            }
 
-                        @include media-breakpoint-down(lg) {
-                            min-height: 50px;
-                            height: 50px;
-                        }
-                    }
+                            .xdsoft_calendar {
 
-                    @include media-breakpoint-down(lg) {
-                        font-size: 1rem;
-                        min-height: 100px;
-                    }
+                                th,
+                                td {
+                                    color: $white;
+                                    background: transparent;
+                                    box-shadow: none;
+                                    border: 0;
 
-                    @include media-breakpoint-down(sm) {
-                        padding: 16px;
-                        font-size: 0.875rem;
-                        min-height: 100px;
-                    }
-                }
-
-                .radio-toolbar input[type="radio"]:checked+label {
-                    background-color: $white;
-                    color: $dark;
-
-                    svg {
-                        filter: invert(44%) sepia(90%) saturate(2285%) hue-rotate(311deg) brightness(83%) contrast(94%);
-                    }
-                }
-
-                .form-check-input:checked+.form-check-label .radio-button-circle {
-                    background-color: $primary;
-                }
-
-                .range {
-                    width: 100%;
-                    height: 24px;
-                    position: relative;
-                    background-color: #F0F0F7;
-                    border-radius: 100px;
-
-                    .sliderThumb {
-                        position: absolute;
-                        width: 34px;
-                        height: 34px;
-                        background-color: $white;
-                        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-                        border-radius: 50%;
-                        top: -6px;
-                        cursor: pointer;
-                        z-index: 2;
-                    }
-
-                    .progressBar {
-                        position: absolute;
-                        height: 100%;
-                        background-color: $secondary;
-                        border-radius: 100px;
-                        z-index: 1;
-                    }
-
-                    input[type=range] {
-                        position: absolute;
-                        width: 99.5%;
-                        height: 24px;
-                        -webkit-appearance: none;
-                        opacity: 0;
-                        z-index: 3;
-
-                        &::-webkit-slider-thumb {
-                            height: 34px;
-                            width: 34px;
-                            background-color: $secondary;
-                            border-radius: 30px;
-                            cursor: pointer;
-                            -webkit-appearance: none;
+                                    &.xdsoft_current {
+                                        background: $white;
+                                        color: $secondary;
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
+
             }
         }
     }
