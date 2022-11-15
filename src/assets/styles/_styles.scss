@@ -1413,6 +1413,18 @@ footer {
                             flex: 0 0 auto;
                             margin: 0;
 
+                            @include media-breakpoint-down(xl) {
+                                width: 23.6%;
+                            }
+
+                            @include media-breakpoint-down(lg) {
+                                width: 31.2%;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                width: 47.1%;
+                            }
+
                             label {
                                 letter-spacing: -0.01em;
                                 border-radius: 20px;
@@ -1445,6 +1457,10 @@ footer {
                                     height: 32px;
                                     content: "";
                                     top: 20px;
+                                }
+
+                                @include media-breakpoint-down(sm) {
+                                    font-size: 1rem;
                                 }
                             }
 
@@ -1600,6 +1616,22 @@ footer {
                             flex: 0 0 auto;
                             margin: 0;
 
+                            @include media-breakpoint-down(xxl) {
+                                width: 15%;
+                            }
+
+                            @include media-breakpoint-down(xl) {
+                                width: 23%;
+                            }
+
+                            @include media-breakpoint-down(lg) {
+                                width: 29%;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                width: 30%;
+                            }
+
                             label {
                                 letter-spacing: -0.01em;
                                 border-radius: 100px;
@@ -1615,6 +1647,12 @@ footer {
                                 display: flex;
                                 justify-content: center;
                                 align-items: end;
+
+                                @include media-breakpoint-down(lg) {
+                                    min-height: 50px;
+                                    font-size: 1rem;
+                                    padding: 16px 20px;
+                                }
 
                                 &:hover {
                                     background: $secondary;
@@ -1634,6 +1672,7 @@ footer {
                         padding: 30px;
                         border-radius: 20px;
                         border: 0;
+                        font-family: $font-articulat !important;
 
                         .xdsoft_datepicker {
                             margin: 0;
@@ -1641,6 +1680,7 @@ footer {
 
                             .xdsoft_label {
                                 background: transparent;
+                                color: $white;
                             }
 
                             .xdsoft_calendar {
@@ -1651,12 +1691,20 @@ footer {
                                     background: transparent;
                                     box-shadow: none;
                                     border: 0;
+                                    height: 35px;
+                                    text-align: center;
 
                                     &.xdsoft_current {
                                         background: $white;
                                         color: $secondary;
                                         border-radius: 50%;
                                     }
+                                }
+
+                                td:hover {
+                                    border-radius: 50% !important;
+                                    background: $secondary !important;
+                                    color: $white !important;
                                 }
                             }
                         }
