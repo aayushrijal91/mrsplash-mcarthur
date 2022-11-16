@@ -161,20 +161,23 @@ function showTab(n) {
     }
 }
 
-function nextPrev(n) {
+jQuery(".nextFormTab").on('click', function(e) {
+    let n = parseInt(jQuery(this).attr('data-current'));
+    
     var x = document.getElementsByClassName("tab");
-
+    
     if (n == 1 && !validateForm()) return false;
     currentTab = currentTab + n;
-
+    
     if (currentTab >= x.length) {
+        e.preventDefault();
         jQuery("#wpcf7-f573-o1 form").submit();
 
         return false;
     }
 
     showTab(currentTab);
-}
+})
 
 function validateForm() {
     var x, y, i, valid = true;

@@ -48,7 +48,8 @@
         </div>
     </div>
     <div class="buttons d-flex justify-content-start align-items-center flex-wrap mt-5 position-relative">
-        <button type="button" id="nextBtn" class="btn btn-white d-inline-flex rounded-pill text-secondary fw-700 px-5 px-xl-8" onclick="nextPrev(1)">Next</button>
-        <span class="px-3 py-md-0 py-2 text-white fw-700" id="prevBtn" onclick="nextPrev(-1)">Go Back</span>
+        <button type="button" id="nextBtn" class="btn nextFormTab btn-white d-inline-flex rounded-pill text-secondary fw-700 px-5 px-xl-8" data-current="1">Next</button>
+        <!-- <button type="button" id="nextBtn" class="btn btn-white d-inline-flex rounded-pill text-secondary fw-700 px-5 px-xl-8" onclick="nextPrev(1)">Next</button> -->
+        <span class="nextFormTab px-3 py-md-0 py-2 text-white fw-700" id="prevBtn" data-current="-1">Go Back</span>
     </div>
 </div>
