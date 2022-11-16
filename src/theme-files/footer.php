@@ -55,9 +55,10 @@
                                 if (have_rows('reviews', 'options')) :
                                     while (have_rows('reviews', 'options')) : the_row();
                                         $img = get_sub_field('image');
+                                        $url = get_sub_field('url');
                                 ?>
                                         <div class="col-6 col-md col-lg-auto">
-                                            <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>">
+                                            <a href="<?= $url ?>" target="_blank"><img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>"></a>
                                         </div>
                                 <?php
                                     endwhile;

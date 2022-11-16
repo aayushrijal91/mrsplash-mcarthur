@@ -21,7 +21,7 @@
         }
 
         @include media-breakpoint-down(sm) {
-            padding: 50px 24px;
+            padding: 24px;
         }
 
         .nav-btns {
@@ -33,7 +33,7 @@
         }
 
         .nav-link {
-            font-size: 2rem;
+            font-size: 1.875rem;
             font-weight: 700;
         }
     }
