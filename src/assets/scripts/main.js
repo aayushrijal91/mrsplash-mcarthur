@@ -168,7 +168,7 @@ function nextPrev(n) {
     currentTab = currentTab + n;
 
     if (currentTab >= x.length) {
-        document.getElementById("slider-form").submit();
+        jQuery("#wpcf7-f573-o1 form").submit();
 
         return false;
     }
