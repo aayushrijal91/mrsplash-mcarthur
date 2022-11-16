@@ -12,7 +12,7 @@
                 </a>
                 <div class="text-white fs-36 fw-700 text-uppercase px-4">Menu</div>
             </div>
-            <img src="<?= get_field('slide_nav_logo','options')['url'] ?>" class="py-5" alt="<?= get_field('slide_nav_logo','options')['alt'] ?>">
+            <img src="<?= get_field('slide_nav_logo', 'options')['url'] ?>" class="py-5" alt="<?= get_field('slide_nav_logo', 'options')['alt'] ?>">
             <?php wp_nav_menu(array(
                 'menu' => 'Mobile Menu',
                 'menu_class' => 'navbar-nav',
@@ -23,7 +23,9 @@
             )); ?>
         </div>
         <div class="row align-items-center nav-btns g-2">
-            <div class="col-12"><hr></div>
+            <div class="col-12">
+                <hr>
+            </div>
             <div class="col-6">
                 <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn btn-light rounded-2 text-primary">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,12 +75,12 @@
                             </a>
                         </div>
                         <div>
-                            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn btn-primary text-white rounded-2 p-2 fs-18 fw-600 lh-1">
+                            <a href="<?= get_site_url() ?>/contact-us" class="btn btn-primary text-white rounded-2 p-2 fs-18 fw-600 lh-1">
                                 Request A Quote
                             </a>
                         </div>
                         <div>
-                            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn btn-secondary text-white rounded-2 p-2 fs-18 fw-600 lh-1">
+                            <a href="<?= get_site_url() ?>/#homeForm" class="btn btn-secondary text-white rounded-2 p-2 fs-18 fw-600 lh-1">
                                 Book Online
                             </a>
                         </div>
