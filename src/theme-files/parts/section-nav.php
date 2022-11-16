@@ -12,7 +12,7 @@
                 </a>
                 <div class="text-white fs-36 fw-700 text-uppercase px-4">Menu</div>
             </div>
-            <img src="<?= get_template_directory_uri() ?>/images/lib/slide-nav-logo.png" class="py-5" alt="logo">
+            <img src="<?= get_field('slide_nav_logo','options')['url'] ?>" class="py-5" alt="<?= get_field('slide_nav_logo','options')['alt'] ?>">
             <?php wp_nav_menu(array(
                 'menu' => 'Mobile Menu',
                 'menu_class' => 'navbar-nav',
