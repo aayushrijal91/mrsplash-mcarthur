@@ -394,6 +394,10 @@ header {
                     color: $primary;
                     font-weight: 700;
                 }
+
+                img {
+                    max-height: 125px;
+                }
             }
 
             .slick-arrow.slick-prev {
@@ -1824,3 +1828,8 @@ footer {
 }
 
 // End of Part ContactUsForm
+
+.pageNotFound,
+.thankyou_page {
+    margin-top: 123px;
+}

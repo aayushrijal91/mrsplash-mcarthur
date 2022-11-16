@@ -105,7 +105,7 @@ get_template_part('parts/section', 'banner_home');
                     ?>
                                     <div class="col-md-6 col-xl-3">
                                         <div class="social_card lazyload" data-src="<?= $bg['url'] ?>">
-                                            <a href="<?= $button['url'] ?>" class="social_button <?= $class ?>">
+                                            <a href="<?= $button['url'] ?>" target="<?= $button['target'] ?>" class="social_button <?= $class ?>">
                                                 <div class="row align-items-center">
                                                     <div class="col-auto text-center"><img src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>"></div>
                                                     <div class="col text-center"><?= $button['title'] ?></div>

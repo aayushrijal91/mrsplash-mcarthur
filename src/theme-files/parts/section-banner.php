@@ -7,6 +7,10 @@ $banner_bg = isset($banner['background']['url']) ? $banner['background']['url'] 
 if (is_page_template('page-templates/suburb.php')) {
     $banner_title = 'Services in<br><span>' . get_the_title() . '</span>';
 }
+
+if(is_home()) {
+    $banner_title = "Featured <span>Blogs</span>";
+}
 ?>
 <header class="subpage_header" style="background: linear-gradient(90deg, #0A161F 40.96%, #252B30 60%, rgba(0,0,0,0) 70%), url(<?= $banner_bg ?>) right center no-repeat; background-size: contain;">
     <div class="container">
