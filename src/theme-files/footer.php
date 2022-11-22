@@ -132,7 +132,11 @@
 <?php wp_footer(); ?>
 <script>
     document.addEventListener('wpcf7mailsent', function(event) {
-        if ('573' == event.detail.contactFormId || '299' == event.detail.contactFormId) {
+        if ('573' == event.detail.contactFormId) {
+            location = '/thank-you-home';
+        }
+
+        if ('299' == event.detail.contactFormId) {
             location = '/thank-you';
         }
     }, false);

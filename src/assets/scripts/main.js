@@ -151,9 +151,11 @@ function showTab(n) {
     } else if (n == (x.length)) {
         jQuery('.buttons').removeClass('d-flex').addClass('d-none');
     } else if (n == (x.length - 1)) {
-        jQuery("#nextBtn").html('Submit');
+        jQuery("#nextBtn").css('display', 'none');
+        jQuery('.wpcf7-form-control.wpcf7-submit').css('display', 'inline-flex');
     } else {
-        jQuery("#nextBtn").html('Next');
+        jQuery("#nextBtn").css('display', 'inline-flex');
+        jQuery('.wpcf7-form-control.wpcf7-submit').css('display', 'none');
         jQuery("#nextBtn").removeClass('btn-white').removeClass('text-primary').addClass('border-white').addClass('text-white');
         jQuery("#prevBtn").css('display', 'inline');
         jQuery('.form .title').removeClass('d-none').addClass('d-block');

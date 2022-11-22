@@ -1269,6 +1269,10 @@ footer {
             cursor: pointer;
         }
 
+        .wpcf7-form-control.wpcf7-submit {
+            display: none;
+        }
+
         .form_slider {
             .slick-track {
                 display: flex !important;
